@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B68ADAA5-2F0B-48F9-958B-269A2D25AA15}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EasyJudoClub</RootNamespace>
+    <AssemblyName>EasyJudoClub</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>View\judo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="gfoidl.DataGridView">
+      <HintPath>..\Lib\gfoidl.DataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controler\EasyJudoClubControler.cs" />
+    <Compile Include="Model\IClub.cs" />
+    <Compile Include="Utils\ClubUtils.cs" />
+    <Compile Include="View\Controls\CheckBoxField.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Controls\CheckBoxField.Designer.cs">
+      <DependentUpon>CheckBoxField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\NumBoxField.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Controls\NumBoxField.Designer.cs">
+      <DependentUpon>NumBoxField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\DateField.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Controls\DateField.Designer.cs">
+      <DependentUpon>DateField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmAbout.Designer.cs">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmColumnChooser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmColumnChooser.Designer.cs">
+      <DependentUpon>FrmColumnChooser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmLicencie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmLicencie.Designer.cs">
+      <DependentUpon>FrmLicencie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Categorie.cs" />
+    <Compile Include="Model\Ceinture.cs" />
+    <Compile Include="Model\Club.cs" />
+    <Compile Include="Model\CommunesHelper.cs" />
+    <Compile Include="Model\CotisationHelper.cs" />
+    <Compile Include="Model\CoutAdhesion.cs" />
+    <Compile Include="View\FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Member.cs" />
+    <Compile Include="Model\MoyenPaiement.cs" />
+    <Compile Include="Utils\ObjectCopier.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Model\Sexe.cs" />
+    <Compile Include="View\Controls\TextBoxField.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Controls\TextBoxField.Designer.cs">
+      <DependentUpon>TextBoxField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\ComboBoxField.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Controls\ComboBoxField.Designer.cs">
+      <DependentUpon>ComboBoxField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\SortableBindingList\PropertyComparer.cs" />
+    <Compile Include="Utils\SortableBindingList\SortableBindingList.cs" />
+    <EmbeddedResource Include="View\Controls\CheckBoxField.resx">
+      <DependentUpon>CheckBoxField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Controls\NumBoxField.resx">
+      <DependentUpon>NumBoxField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Controls\DateField.resx">
+      <DependentUpon>DateField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmAbout.resx">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmColumnChooser.resx">
+      <DependentUpon>FrmColumnChooser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmLicencie.resx">
+      <DependentUpon>FrmLicencie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\Controls\TextBoxField.resx">
+      <DependentUpon>TextBoxField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Controls\ComboBoxField.resx">
+      <DependentUpon>ComboBoxField.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\Member.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="View\judo.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
