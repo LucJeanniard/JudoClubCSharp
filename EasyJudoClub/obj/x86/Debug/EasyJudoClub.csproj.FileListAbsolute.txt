@@ -1,7 +1,6 @@
 C:\CSharp\JudoClubCSharp\EasyJudoClub\bin\Debug\EasyJudoClub.exe
 C:\CSharp\JudoClubCSharp\EasyJudoClub\bin\Debug\EasyJudoClub.pdb
 C:\CSharp\JudoClubCSharp\EasyJudoClub\bin\Debug\gfoidl.DataGridView.dll
-C:\CSharp\JudoClubCSharp\EasyJudoClub\obj\x86\Debug\EasyJudoClub.csprojResolveAssemblyReference.cache
 C:\CSharp\JudoClubCSharp\EasyJudoClub\obj\x86\Debug\EasyJudoClub.Controls.CheckBoxField.resources
 C:\CSharp\JudoClubCSharp\EasyJudoClub\obj\x86\Debug\EasyJudoClub.NumBoxField.resources
 C:\CSharp\JudoClubCSharp\EasyJudoClub\obj\x86\Debug\EasyJudoClub.Controls.DateField.resources

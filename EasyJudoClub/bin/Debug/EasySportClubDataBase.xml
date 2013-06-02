@@ -2,34 +2,22 @@
 <Club xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Members>
     <Member>
-      <saison2012_2013>true</saison2012_2013>
-      <Id>125</Id>
-      <DateEntreeClub>2013-03-12T20:58:37.7385174+01:00</DateEntreeClub>
-      <Nom>aa</Nom>
-      <Prenom>aa</Prenom>
-      <NomPere />
-      <PrenomPere />
-      <NomMere />
-      <PrenomMere />
-      <Commune />
-      <CodePostal />
-      <Adresse />
+      <saison2012_2013>false</saison2012_2013>
+      <Id>2</Id>
+      <DateEntreeClub>0001-01-01T00:00:00</DateEntreeClub>
+      <Nom>ABEILLE</Nom>
+      <Prenom>ROMAIN</Prenom>
+      <Commune>Colombe</Commune>
+      <CodePostal>38690</CodePostal>
       <Email />
-      <Tel />
-      <TelPortable />
-      <DateDeNaissance>2000-01-01T00:00:00</DateDeNaissance>
+      <Tel>04 76 06 35 57</Tel>
+      <TelPortable>06 06 41 14 97</TelPortable>
+      <DateDeNaissance>2002-09-20T00:00:00</DateDeNaissance>
       <Sexe>Masculin</Sexe>
-      <LicenseNumber />
+      <LicenseNumber>M29092002ABEIL01</LicenseNumber>
       <Ceinture>Blanche</Ceinture>
       <CommisaireSportif>false</CommisaireSportif>
       <Arbitre>false</Arbitre>
-      <CertificatMedicalNomMedecin />
-      <CertificatMedicalTelMedecin />
-      <MoyenPaiementsLiquide />
-      <MoyenPaiementsCheque />
-      <MoyenPaiementsChequesVacances />
-      <MoyenPaiementsChequierJeune />
-      <MoyenPaiementsCarteMRA />
     </Member>
     <Member>
       <saison2012_2013>false</saison2012_2013>
@@ -51,18 +39,18 @@
     </Member>
     <Member>
       <saison2012_2013>false</saison2012_2013>
-      <Id>2</Id>
+      <Id>5</Id>
       <DateEntreeClub>0001-01-01T00:00:00</DateEntreeClub>
-      <Nom>ABEILLE</Nom>
-      <Prenom>ROMAIN</Prenom>
-      <Commune>Colombe</Commune>
+      <Nom>AGOSTINIANO</Nom>
+      <Prenom>PERLINE</Prenom>
+      <Commune>COLOMBE</Commune>
       <CodePostal>38690</CodePostal>
-      <Email />
-      <Tel>04 76 06 35 57</Tel>
-      <TelPortable>06 06 41 14 97</TelPortable>
-      <DateDeNaissance>2002-09-20T00:00:00</DateDeNaissance>
-      <Sexe>Masculin</Sexe>
-      <LicenseNumber>M29092002ABEIL01</LicenseNumber>
+      <Email>mary.agap@orange.fr</Email>
+      <Tel>0476316874</Tel>
+      <TelPortable>0660968059</TelPortable>
+      <DateDeNaissance>1997-02-23T00:00:00</DateDeNaissance>
+      <Sexe>Feminin</Sexe>
+      <LicenseNumber>F23021997AGOST01</LicenseNumber>
       <Ceinture>Blanche</Ceinture>
       <CommisaireSportif>false</CommisaireSportif>
       <Arbitre>false</Arbitre>
@@ -81,24 +69,6 @@
       <DateDeNaissance>1970-05-21T00:00:00</DateDeNaissance>
       <Sexe>Feminin</Sexe>
       <LicenseNumber>2</LicenseNumber>
-      <Ceinture>Blanche</Ceinture>
-      <CommisaireSportif>false</CommisaireSportif>
-      <Arbitre>false</Arbitre>
-    </Member>
-    <Member>
-      <saison2012_2013>false</saison2012_2013>
-      <Id>5</Id>
-      <DateEntreeClub>0001-01-01T00:00:00</DateEntreeClub>
-      <Nom>AGOSTINIANO</Nom>
-      <Prenom>PERLINE</Prenom>
-      <Commune>COLOMBE</Commune>
-      <CodePostal>38690</CodePostal>
-      <Email>mary.agap@orange.fr</Email>
-      <Tel>0476316874</Tel>
-      <TelPortable>0660968059</TelPortable>
-      <DateDeNaissance>1997-02-23T00:00:00</DateDeNaissance>
-      <Sexe>Feminin</Sexe>
-      <LicenseNumber>F23021997AGOST01</LicenseNumber>
       <Ceinture>Blanche</Ceinture>
       <CommisaireSportif>false</CommisaireSportif>
       <Arbitre>false</Arbitre>
@@ -303,6 +273,24 @@
     </Member>
     <Member>
       <saison2012_2013>false</saison2012_2013>
+      <Id>16</Id>
+      <DateEntreeClub>0001-01-01T00:00:00</DateEntreeClub>
+      <Nom>BLAIN</Nom>
+      <Prenom>ALEXANDRA</Prenom>
+      <Commune>BIZONNES</Commune>
+      <CodePostal>38690</CodePostal>
+      <Email>blain.olivier@aliceadsl.fr</Email>
+      <Tel>04 74 88 94 77</Tel>
+      <TelPortable>06 24 08 16 54</TelPortable>
+      <DateDeNaissance>1998-03-11T00:00:00</DateDeNaissance>
+      <Sexe>Feminin</Sexe>
+      <LicenseNumber>F11031998BLAIN01</LicenseNumber>
+      <Ceinture>Blanche</Ceinture>
+      <CommisaireSportif>false</CommisaireSportif>
+      <Arbitre>false</Arbitre>
+    </Member>
+    <Member>
+      <saison2012_2013>false</saison2012_2013>
       <Id>17</Id>
       <DateEntreeClub>0001-01-01T00:00:00</DateEntreeClub>
       <Nom>BLAIN</Nom>
@@ -333,24 +321,6 @@
       <DateDeNaissance>2003-04-21T00:00:00</DateDeNaissance>
       <Sexe>Feminin</Sexe>
       <LicenseNumber>F21042003BLAIN01</LicenseNumber>
-      <Ceinture>Blanche</Ceinture>
-      <CommisaireSportif>false</CommisaireSportif>
-      <Arbitre>false</Arbitre>
-    </Member>
-    <Member>
-      <saison2012_2013>false</saison2012_2013>
-      <Id>16</Id>
-      <DateEntreeClub>0001-01-01T00:00:00</DateEntreeClub>
-      <Nom>BLAIN</Nom>
-      <Prenom>ALEXANDRA</Prenom>
-      <Commune>BIZONNES</Commune>
-      <CodePostal>38690</CodePostal>
-      <Email>blain.olivier@aliceadsl.fr</Email>
-      <Tel>04 74 88 94 77</Tel>
-      <TelPortable>06 24 08 16 54</TelPortable>
-      <DateDeNaissance>1998-03-11T00:00:00</DateDeNaissance>
-      <Sexe>Feminin</Sexe>
-      <LicenseNumber>F11031998BLAIN01</LicenseNumber>
       <Ceinture>Blanche</Ceinture>
       <CommisaireSportif>false</CommisaireSportif>
       <Arbitre>false</Arbitre>
@@ -573,24 +543,6 @@
     </Member>
     <Member>
       <saison2012_2013>false</saison2012_2013>
-      <Id>32</Id>
-      <DateEntreeClub>0001-01-01T00:00:00</DateEntreeClub>
-      <Nom>CAUJOLLE</Nom>
-      <Prenom>CORENTIN</Prenom>
-      <Commune>LE GRAND LEMPS</Commune>
-      <CodePostal>38690</CodePostal>
-      <Email>sandra.caujolle@wanadoo.fr</Email>
-      <Tel>0476559118</Tel>
-      <TelPortable>0608634096</TelPortable>
-      <DateDeNaissance>2003-06-06T00:00:00</DateDeNaissance>
-      <Sexe>Masculin</Sexe>
-      <LicenseNumber>M06062003CAUJO01</LicenseNumber>
-      <Ceinture>Blanche</Ceinture>
-      <CommisaireSportif>false</CommisaireSportif>
-      <Arbitre>false</Arbitre>
-    </Member>
-    <Member>
-      <saison2012_2013>false</saison2012_2013>
       <Id>31</Id>
       <DateEntreeClub>0001-01-01T00:00:00</DateEntreeClub>
       <Nom>CAUJOLLE</Nom>
@@ -603,6 +555,24 @@
       <DateDeNaissance>1999-08-16T00:00:00</DateDeNaissance>
       <Sexe>Masculin</Sexe>
       <LicenseNumber>M16081999CAUJO01</LicenseNumber>
+      <Ceinture>Blanche</Ceinture>
+      <CommisaireSportif>false</CommisaireSportif>
+      <Arbitre>false</Arbitre>
+    </Member>
+    <Member>
+      <saison2012_2013>false</saison2012_2013>
+      <Id>32</Id>
+      <DateEntreeClub>0001-01-01T00:00:00</DateEntreeClub>
+      <Nom>CAUJOLLE</Nom>
+      <Prenom>CORENTIN</Prenom>
+      <Commune>LE GRAND LEMPS</Commune>
+      <CodePostal>38690</CodePostal>
+      <Email>sandra.caujolle@wanadoo.fr</Email>
+      <Tel>0476559118</Tel>
+      <TelPortable>0608634096</TelPortable>
+      <DateDeNaissance>2003-06-06T00:00:00</DateDeNaissance>
+      <Sexe>Masculin</Sexe>
+      <LicenseNumber>M06062003CAUJO01</LicenseNumber>
       <Ceinture>Blanche</Ceinture>
       <CommisaireSportif>false</CommisaireSportif>
       <Arbitre>false</Arbitre>
@@ -627,24 +597,6 @@
     </Member>
     <Member>
       <saison2012_2013>false</saison2012_2013>
-      <Id>34</Id>
-      <DateEntreeClub>0001-01-01T00:00:00</DateEntreeClub>
-      <Nom>CECCONI</Nom>
-      <Prenom>ARTHUR</Prenom>
-      <Commune>BIZONNES</Commune>
-      <CodePostal>38690</CodePostal>
-      <Email>emmanuelle.pachoud@orange.fr</Email>
-      <Tel>04 74 18 53 98</Tel>
-      <TelPortable>06 87 52 99 27</TelPortable>
-      <DateDeNaissance>2005-01-30T00:00:00</DateDeNaissance>
-      <Sexe>Masculin</Sexe>
-      <LicenseNumber>M30012005CECCO01</LicenseNumber>
-      <Ceinture>Blanche</Ceinture>
-      <CommisaireSportif>false</CommisaireSportif>
-      <Arbitre>false</Arbitre>
-    </Member>
-    <Member>
-      <saison2012_2013>false</saison2012_2013>
       <Id>35</Id>
       <DateEntreeClub>0001-01-01T00:00:00</DateEntreeClub>
       <Nom>CECCONI</Nom>
@@ -657,6 +609,24 @@
       <DateDeNaissance>2007-04-09T00:00:00</DateDeNaissance>
       <Sexe>Masculin</Sexe>
       <LicenseNumber />
+      <Ceinture>Blanche</Ceinture>
+      <CommisaireSportif>false</CommisaireSportif>
+      <Arbitre>false</Arbitre>
+    </Member>
+    <Member>
+      <saison2012_2013>false</saison2012_2013>
+      <Id>34</Id>
+      <DateEntreeClub>0001-01-01T00:00:00</DateEntreeClub>
+      <Nom>CECCONI</Nom>
+      <Prenom>ARTHUR</Prenom>
+      <Commune>BIZONNES</Commune>
+      <CodePostal>38690</CodePostal>
+      <Email>emmanuelle.pachoud@orange.fr</Email>
+      <Tel>04 74 18 53 98</Tel>
+      <TelPortable>06 87 52 99 27</TelPortable>
+      <DateDeNaissance>2005-01-30T00:00:00</DateDeNaissance>
+      <Sexe>Masculin</Sexe>
+      <LicenseNumber>M30012005CECCO01</LicenseNumber>
       <Ceinture>Blanche</Ceinture>
       <CommisaireSportif>false</CommisaireSportif>
       <Arbitre>false</Arbitre>
@@ -1473,24 +1443,6 @@
     </Member>
     <Member>
       <saison2012_2013>false</saison2012_2013>
-      <Id>81</Id>
-      <DateEntreeClub>0001-01-01T00:00:00</DateEntreeClub>
-      <Nom>JACQUIER</Nom>
-      <Prenom>JONATHAN</Prenom>
-      <Commune>COLOMBE</Commune>
-      <CodePostal>3869O</CodePostal>
-      <Email>jacquier.gilles@orange.fr</Email>
-      <Tel>04 76 06 22 56</Tel>
-      <TelPortable>06 87 58 39 21</TelPortable>
-      <DateDeNaissance>1994-06-18T00:00:00</DateDeNaissance>
-      <Sexe>Masculin</Sexe>
-      <LicenseNumber>M18061994JACQU01</LicenseNumber>
-      <Ceinture>Blanche</Ceinture>
-      <CommisaireSportif>false</CommisaireSportif>
-      <Arbitre>false</Arbitre>
-    </Member>
-    <Member>
-      <saison2012_2013>false</saison2012_2013>
       <Id>82</Id>
       <DateEntreeClub>0001-01-01T00:00:00</DateEntreeClub>
       <Nom>JACQUIER</Nom>
@@ -1503,6 +1455,24 @@
       <DateDeNaissance>1998-04-30T00:00:00</DateDeNaissance>
       <Sexe>Masculin</Sexe>
       <LicenseNumber>M30041998JACQU01</LicenseNumber>
+      <Ceinture>Blanche</Ceinture>
+      <CommisaireSportif>false</CommisaireSportif>
+      <Arbitre>false</Arbitre>
+    </Member>
+    <Member>
+      <saison2012_2013>false</saison2012_2013>
+      <Id>81</Id>
+      <DateEntreeClub>0001-01-01T00:00:00</DateEntreeClub>
+      <Nom>JACQUIER</Nom>
+      <Prenom>JONATHAN</Prenom>
+      <Commune>COLOMBE</Commune>
+      <CodePostal>3869O</CodePostal>
+      <Email>jacquier.gilles@orange.fr</Email>
+      <Tel>04 76 06 22 56</Tel>
+      <TelPortable>06 87 58 39 21</TelPortable>
+      <DateDeNaissance>1994-06-18T00:00:00</DateDeNaissance>
+      <Sexe>Masculin</Sexe>
+      <LicenseNumber>M18061994JACQU01</LicenseNumber>
       <Ceinture>Blanche</Ceinture>
       <CommisaireSportif>false</CommisaireSportif>
       <Arbitre>false</Arbitre>
@@ -2024,24 +1994,6 @@
     </Member>
     <Member>
       <saison2012_2013>false</saison2012_2013>
-      <Id>111</Id>
-      <DateEntreeClub>0001-01-01T00:00:00</DateEntreeClub>
-      <Nom>PERRIN</Nom>
-      <Prenom>MAXIME</Prenom>
-      <Commune>LE GRAND LEMPS</Commune>
-      <CodePostal>38690</CodePostal>
-      <Email />
-      <Tel>0476558095</Tel>
-      <TelPortable>0671215609</TelPortable>
-      <DateDeNaissance>2006-11-10T00:00:00</DateDeNaissance>
-      <Sexe>Masculin</Sexe>
-      <LicenseNumber />
-      <Ceinture>Blanche</Ceinture>
-      <CommisaireSportif>false</CommisaireSportif>
-      <Arbitre>false</Arbitre>
-    </Member>
-    <Member>
-      <saison2012_2013>false</saison2012_2013>
       <Id>110</Id>
       <DateEntreeClub>0001-01-01T00:00:00</DateEntreeClub>
       <Nom>PERRIN</Nom>
@@ -2054,6 +2006,24 @@
       <DateDeNaissance>2002-03-10T00:00:00</DateDeNaissance>
       <Sexe>Masculin</Sexe>
       <LicenseNumber>M10032002PERRI01</LicenseNumber>
+      <Ceinture>Blanche</Ceinture>
+      <CommisaireSportif>false</CommisaireSportif>
+      <Arbitre>false</Arbitre>
+    </Member>
+    <Member>
+      <saison2012_2013>false</saison2012_2013>
+      <Id>111</Id>
+      <DateEntreeClub>0001-01-01T00:00:00</DateEntreeClub>
+      <Nom>PERRIN</Nom>
+      <Prenom>MAXIME</Prenom>
+      <Commune>LE GRAND LEMPS</Commune>
+      <CodePostal>38690</CodePostal>
+      <Email />
+      <Tel>0476558095</Tel>
+      <TelPortable>0671215609</TelPortable>
+      <DateDeNaissance>2006-11-10T00:00:00</DateDeNaissance>
+      <Sexe>Masculin</Sexe>
+      <LicenseNumber />
       <Ceinture>Blanche</Ceinture>
       <CommisaireSportif>false</CommisaireSportif>
       <Arbitre>false</Arbitre>

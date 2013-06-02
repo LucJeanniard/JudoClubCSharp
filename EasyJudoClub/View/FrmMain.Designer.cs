@@ -33,6 +33,20 @@ namespace EasyJudoClub
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.dataGridMembers = new gfoidl.Windows.Forms.gfDataGridView();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.ToolStripMenuItem_Options = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_Colonnes = new System.Windows.Forms.ToolStripMenuItem();
+            this.creerUneSauvegardeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.supprimerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.informationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatus_members = new System.Windows.Forms.ToolStripStatusLabel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_clearFilter = new System.Windows.Forms.Button();
+            this.cb_2012_2013_Filter = new System.Windows.Forms.CheckBox();
             this.saison20122013DataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateEntreeClubDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,25 +75,12 @@ namespace EasyJudoClub
             this.categorieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.memberBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.ToolStripMenuItem_Options = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripMenuItem_Colonnes = new System.Windows.Forms.ToolStripMenuItem();
-            this.creerUneSauvegardeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.supprimerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.informationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatus_members = new System.Windows.Forms.ToolStripStatusLabel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btn_clearFilter = new System.Windows.Forms.Button();
-            this.cb_2012_2013_Filter = new System.Windows.Forms.CheckBox();
             this.memberBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.imprimerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMembers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,9 +89,9 @@ namespace EasyJudoClub
             this.dataGridMembers.AllowUserToAddRows = false;
             this.dataGridMembers.AllowUserToDeleteRows = false;
             this.dataGridMembers.AllowUserToOrderColumns = true;
-            this.dataGridMembers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridMembers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridMembers.AutoGenerateColumns = false;
             this.dataGridMembers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridMembers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -129,6 +130,126 @@ namespace EasyJudoClub
             this.dataGridMembers.Size = new System.Drawing.Size(1071, 404);
             this.dataGridMembers.TabIndex = 1;
             this.dataGridMembers.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dataGridMembers_MouseDoubleClick);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItem_Options,
+            this.ajouterToolStripMenuItem,
+            this.editerToolStripMenuItem,
+            this.supprimerToolStripMenuItem,
+            this.imprimerToolStripMenuItem,
+            this.informationsToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1071, 24);
+            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // ToolStripMenuItem_Options
+            // 
+            this.ToolStripMenuItem_Options.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItem_Colonnes,
+            this.creerUneSauvegardeToolStripMenuItem});
+            this.ToolStripMenuItem_Options.Name = "ToolStripMenuItem_Options";
+            this.ToolStripMenuItem_Options.Size = new System.Drawing.Size(61, 20);
+            this.ToolStripMenuItem_Options.Text = "Options";
+            // 
+            // ToolStripMenuItem_Colonnes
+            // 
+            this.ToolStripMenuItem_Colonnes.Name = "ToolStripMenuItem_Colonnes";
+            this.ToolStripMenuItem_Colonnes.Size = new System.Drawing.Size(188, 22);
+            this.ToolStripMenuItem_Colonnes.Text = "Colonnes";
+            this.ToolStripMenuItem_Colonnes.Click += new System.EventHandler(this.colonnesToolStripMenuItem1_Click);
+            // 
+            // creerUneSauvegardeToolStripMenuItem
+            // 
+            this.creerUneSauvegardeToolStripMenuItem.Name = "creerUneSauvegardeToolStripMenuItem";
+            this.creerUneSauvegardeToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.creerUneSauvegardeToolStripMenuItem.Text = "Creer une sauvegarde";
+            this.creerUneSauvegardeToolStripMenuItem.Click += new System.EventHandler(this.creerUneSauvegardeToolStripMenuItem_Click);
+            // 
+            // ajouterToolStripMenuItem
+            // 
+            this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
+            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this.ajouterToolStripMenuItem.Text = "Ajouter";
+            this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.ajouterToolStripMenuItem_Click);
+            // 
+            // editerToolStripMenuItem
+            // 
+            this.editerToolStripMenuItem.Name = "editerToolStripMenuItem";
+            this.editerToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.editerToolStripMenuItem.Text = "Editer";
+            this.editerToolStripMenuItem.Click += new System.EventHandler(this.editerToolStripMenuItem_Click);
+            // 
+            // supprimerToolStripMenuItem
+            // 
+            this.supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
+            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
+            this.supprimerToolStripMenuItem.Text = "Supprimer";
+            this.supprimerToolStripMenuItem.Click += new System.EventHandler(this.supprimerToolStripMenuItem_Click);
+            // 
+            // informationsToolStripMenuItem
+            // 
+            this.informationsToolStripMenuItem.Name = "informationsToolStripMenuItem";
+            this.informationsToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
+            this.informationsToolStripMenuItem.Text = "Informations";
+            this.informationsToolStripMenuItem.Click += new System.EventHandler(this.informationsToolStripMenuItem_Click);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatus_members});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 472);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1071, 22);
+            this.statusStrip1.TabIndex = 3;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatus_members
+            // 
+            this.toolStripStatus_members.Name = "toolStripStatus_members";
+            this.toolStripStatus_members.Size = new System.Drawing.Size(129, 17);
+            this.toolStripStatus_members.Text = "Nombre de membres : ";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(173, 39);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(260, 20);
+            this.textBox1.TabIndex = 4;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(145, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Rechercher (nom ou prénom)";
+            // 
+            // btn_clearFilter
+            // 
+            this.btn_clearFilter.Location = new System.Drawing.Point(560, 37);
+            this.btn_clearFilter.Name = "btn_clearFilter";
+            this.btn_clearFilter.Size = new System.Drawing.Size(75, 23);
+            this.btn_clearFilter.TabIndex = 6;
+            this.btn_clearFilter.Text = "Effacer filtre";
+            this.btn_clearFilter.UseVisualStyleBackColor = true;
+            this.btn_clearFilter.Click += new System.EventHandler(this.btn_clearFilter_Click);
+            // 
+            // cb_2012_2013_Filter
+            // 
+            this.cb_2012_2013_Filter.AutoSize = true;
+            this.cb_2012_2013_Filter.Location = new System.Drawing.Point(459, 41);
+            this.cb_2012_2013_Filter.Name = "cb_2012_2013_Filter";
+            this.cb_2012_2013_Filter.Size = new System.Drawing.Size(85, 17);
+            this.cb_2012_2013_Filter.TabIndex = 7;
+            this.cb_2012_2013_Filter.Text = "2012 / 2013";
+            this.cb_2012_2013_Filter.UseVisualStyleBackColor = true;
+            this.cb_2012_2013_Filter.CheckedChanged += new System.EventHandler(this.cb_2012_2013_Filter_CheckedChanged);
             // 
             // saison20122013DataGridViewCheckBoxColumn
             // 
@@ -324,128 +445,16 @@ namespace EasyJudoClub
             // 
             this.memberBindingSource1.DataSource = typeof(EasyJudoClub.Member);
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolStripMenuItem_Options,
-            this.ajouterToolStripMenuItem,
-            this.editerToolStripMenuItem,
-            this.supprimerToolStripMenuItem,
-            this.informationsToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1071, 24);
-            this.menuStrip1.TabIndex = 2;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // ToolStripMenuItem_Options
-            // 
-            this.ToolStripMenuItem_Options.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolStripMenuItem_Colonnes,
-            this.creerUneSauvegardeToolStripMenuItem});
-            this.ToolStripMenuItem_Options.Name = "ToolStripMenuItem_Options";
-            this.ToolStripMenuItem_Options.Size = new System.Drawing.Size(61, 20);
-            this.ToolStripMenuItem_Options.Text = "Options";
-            // 
-            // ToolStripMenuItem_Colonnes
-            // 
-            this.ToolStripMenuItem_Colonnes.Name = "ToolStripMenuItem_Colonnes";
-            this.ToolStripMenuItem_Colonnes.Size = new System.Drawing.Size(188, 22);
-            this.ToolStripMenuItem_Colonnes.Text = "Colonnes";
-            this.ToolStripMenuItem_Colonnes.Click += new System.EventHandler(this.colonnesToolStripMenuItem1_Click);
-            // 
-            // creerUneSauvegardeToolStripMenuItem
-            // 
-            this.creerUneSauvegardeToolStripMenuItem.Name = "creerUneSauvegardeToolStripMenuItem";
-            this.creerUneSauvegardeToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.creerUneSauvegardeToolStripMenuItem.Text = "Creer une sauvegarde";
-            this.creerUneSauvegardeToolStripMenuItem.Click += new System.EventHandler(this.creerUneSauvegardeToolStripMenuItem_Click);
-            // 
-            // ajouterToolStripMenuItem
-            // 
-            this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
-            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
-            this.ajouterToolStripMenuItem.Text = "Ajouter";
-            this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.ajouterToolStripMenuItem_Click);
-            // 
-            // editerToolStripMenuItem
-            // 
-            this.editerToolStripMenuItem.Name = "editerToolStripMenuItem";
-            this.editerToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
-            this.editerToolStripMenuItem.Text = "Editer";
-            this.editerToolStripMenuItem.Click += new System.EventHandler(this.editerToolStripMenuItem_Click);
-            // 
-            // supprimerToolStripMenuItem
-            // 
-            this.supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
-            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
-            this.supprimerToolStripMenuItem.Text = "Supprimer";
-            this.supprimerToolStripMenuItem.Click += new System.EventHandler(this.supprimerToolStripMenuItem_Click);
-            // 
-            // informationsToolStripMenuItem
-            // 
-            this.informationsToolStripMenuItem.Name = "informationsToolStripMenuItem";
-            this.informationsToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
-            this.informationsToolStripMenuItem.Text = "Informations";
-            this.informationsToolStripMenuItem.Click += new System.EventHandler(this.informationsToolStripMenuItem_Click);
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatus_members});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 472);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1071, 22);
-            this.statusStrip1.TabIndex = 3;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripStatus_members
-            // 
-            this.toolStripStatus_members.Name = "toolStripStatus_members";
-            this.toolStripStatus_members.Size = new System.Drawing.Size(129, 17);
-            this.toolStripStatus_members.Text = "Nombre de membres : ";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(173, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(260, 20);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Rechercher (nom ou prénom)";
-            // 
-            // btn_clearFilter
-            // 
-            this.btn_clearFilter.Location = new System.Drawing.Point(560, 37);
-            this.btn_clearFilter.Name = "btn_clearFilter";
-            this.btn_clearFilter.Size = new System.Drawing.Size(75, 23);
-            this.btn_clearFilter.TabIndex = 6;
-            this.btn_clearFilter.Text = "Effacer filtre";
-            this.btn_clearFilter.UseVisualStyleBackColor = true;
-            this.btn_clearFilter.Click += new System.EventHandler(this.btn_clearFilter_Click);
-            // 
-            // cb_2012_2013_Filter
-            // 
-            this.cb_2012_2013_Filter.AutoSize = true;
-            this.cb_2012_2013_Filter.Location = new System.Drawing.Point(459, 41);
-            this.cb_2012_2013_Filter.Name = "cb_2012_2013_Filter";
-            this.cb_2012_2013_Filter.Size = new System.Drawing.Size(85, 17);
-            this.cb_2012_2013_Filter.TabIndex = 7;
-            this.cb_2012_2013_Filter.Text = "2012 / 2013";
-            this.cb_2012_2013_Filter.UseVisualStyleBackColor = true;
-            this.cb_2012_2013_Filter.CheckedChanged += new System.EventHandler(this.cb_2012_2013_Filter_CheckedChanged);
-            // 
             // memberBindingSource
             // 
             this.memberBindingSource.DataSource = typeof(EasyJudoClub.Member);
+            // 
+            // imprimerToolStripMenuItem
+            // 
+            this.imprimerToolStripMenuItem.Name = "imprimerToolStripMenuItem";
+            this.imprimerToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.imprimerToolStripMenuItem.Text = "Imprimer";
+            this.imprimerToolStripMenuItem.Click += new System.EventHandler(this.imprimerToolStripMenuItem_Click);
             // 
             // FrmMain
             // 
@@ -466,11 +475,11 @@ namespace EasyJudoClub
             this.Text = "Judo Club Colombe";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMembers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -523,6 +532,7 @@ namespace EasyJudoClub
         private System.Windows.Forms.DataGridViewTextBoxColumn ageDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource memberBindingSource1;
         private System.Windows.Forms.ToolStripMenuItem informationsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem imprimerToolStripMenuItem;
 
     }
 }

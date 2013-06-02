@@ -20,33 +20,42 @@ namespace EasyJudoClub.Utils
         {
             var path = Path.GetTempPath();
             var errorMessage = "";
-            PrintAsPdf(member, path, out errorMessage);
-            var filePath = GetPdfFileName(member, path);
-            using (var process = Process.Start(filePath)) { }
+            if (PrintAsPdf(member, path, out errorMessage))
+            {
+                var filePath = GetPdfFileNameForOneMember(member, path);
+                using (var process = Process.Start(filePath)) { }
+            }
+            else
+            {
+                MessageBox.Show(errorMessage, "error", MessageBoxButtons.OK, MessageBoxIcon.Error); 
+            }
         }
 
+        public static void Print(List<Member> members)
+        {
+            var path = Path.GetTempPath();
+            var errorMessage = "";
+            if (PrintAsPdf(members, path, out errorMessage))
+            {
+                var filePath = GetPdfFileNameForListOfMember(path);
+                using (var process = Process.Start(filePath)) { }
+            }
+            else
+            {
+                MessageBox.Show(errorMessage, "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
-        public static bool PrintAsPdf(Member member, string path, out string errorMessage)
+        public static bool PrintAsPdf(List<Member> members, string path, out string errorMessage)
         {
             errorMessage = "";
-            var outputFileName = GetPdfFileName(member, path);
+            var outputFileName = GetPdfFileNameForListOfMember(path);
 
             using (var document = new PdfDocument())
             {
-                PdfPage page = document.AddPage();
-                page.Orientation = PdfSharp.PageOrientation.Landscape;
-
-                using (var bitmap = GetMemberFormAsBitmap(member))
+                foreach (var member in members)
                 {
-                    using (var image = XImage.FromGdiPlusImage(bitmap as Image))
-                    {
-                        using (var graphic = XGraphics.FromPdfPage(page))
-                        {
-                            var x = 30;
-                            var y = 30;
-                            graphic.DrawImage(image, x, y);
-                        }
-                    }
+                    AddMemberToNewPage(member, document);
                 }
 
                 try
@@ -62,7 +71,55 @@ namespace EasyJudoClub.Utils
             }
         }
 
-        private static string GetPdfFileName(Member member, string path)
+        private static string GetPdfFileNameForListOfMember(string path)
+        {
+            var outputFileName = Path.Combine(path, "JudoMembers" + ".pdf");
+            return outputFileName;
+        }
+
+        public static bool PrintAsPdf(Member member, string path, out string errorMessage)
+        {
+            errorMessage = "";
+            var outputFileName = GetPdfFileNameForOneMember(member, path);
+
+            using (var document = new PdfDocument())
+            {
+
+                AddMemberToNewPage(member, document);
+
+                try
+                {
+                    document.Save(outputFileName);
+                    return File.Exists(outputFileName);
+                }
+                catch (Exception e)
+                {
+                    errorMessage = e.Message;
+                    return false;
+                }
+            }
+        }
+
+        private static void AddMemberToNewPage(Member member, PdfDocument document)
+        {
+            using (var bitmap = GetMemberFormAsBitmap(member))
+            {
+                PdfPage page = document.AddPage();
+                page.Orientation = PdfSharp.PageOrientation.Landscape;
+
+                using (var image = XImage.FromGdiPlusImage(bitmap as Image))
+                {
+                    using (var graphic = XGraphics.FromPdfPage(page))
+                    {
+                        var x = 30;
+                        var y = 30;
+                        graphic.DrawImage(image, x, y);
+                    }
+                }
+            }
+        }
+
+        private static string GetPdfFileNameForOneMember(Member member, string path)
         {
             var outputFileName = Path.Combine(path, member.Prenom + "_" + member.Nom + ".pdf");
             return outputFileName;

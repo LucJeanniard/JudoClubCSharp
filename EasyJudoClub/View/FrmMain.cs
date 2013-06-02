@@ -6,6 +6,8 @@ using System.Windows.Forms;
 using Be.Timvw.Framework.ComponentModel;
 using EasyJudoClub.Model;
 using EasyJudoClub.Controler;
+using EasyJudoClub.Utils;
+using System.Collections.Generic;
 
 namespace EasyJudoClub
 {
@@ -141,20 +143,31 @@ namespace EasyJudoClub
             var confirmationMessage = String.Format("Voulez-vous supprimer le(s) {0} membre(s) selectionés", dataGridMembers.SelectedRows.Count);
             if (MessageBox.Show(this, confirmationMessage, "Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-
-                foreach (DataGridViewRow selectedRow in dataGridMembers.SelectedRows)
+                var selectedMembers = GetSelectedMembers();
+                foreach(var member in selectedMembers)
                 {
-                    var member = selectedRow.DataBoundItem as Member;
-                    if (member != null)
-                    {
-                        var memberId = member.Id;
-                        _easyJudoClubControler.RemoveMember(memberId);
-                    }
+                    var memberId = member.Id;
+                    _easyJudoClubControler.RemoveMember(memberId);
                 }
                 ResetFilter();
                 RefreshFrmMain();
             }
         }
+
+        private List<Member> GetSelectedMembers()
+        {
+            var members = new List<Member>();
+            foreach (DataGridViewRow selectedRow in dataGridMembers.SelectedRows)
+            {
+                var member = selectedRow.DataBoundItem as Member;
+                if (member != null)
+                {
+                    members.Add(member);
+                }
+            }
+            return members;
+        }
+
 
         private void SelectRow(int memberId)
         {
@@ -259,6 +272,11 @@ namespace EasyJudoClub
         private void informationsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmAbout.ShowModal();
+        }
+
+        private void imprimerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MemberPrinter.Print(GetSelectedMembers());
         }
     }
 }
