@@ -30,36 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLicencie));
             this.gb_identite = new System.Windows.Forms.GroupBox();
-            this.gb_adresse = new System.Windows.Forms.GroupBox();
-            this.lbl_Commune = new System.Windows.Forms.Label();
-            this.cbb_Commune = new System.Windows.Forms.ComboBox();
-            this.gb_parents = new System.Windows.Forms.GroupBox();
-            this.gb_divers = new System.Windows.Forms.GroupBox();
-            this.gb_reglement = new System.Windows.Forms.GroupBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_OK = new System.Windows.Forms.Button();
-            this.btn_Cancel = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tbf_TelMedecin = new EasyJudoClub.TextBoxField();
-            this.tbf_NomMedecin = new EasyJudoClub.TextBoxField();
-            this.tbf_CarteMRA = new EasyJudoClub.TextBoxField();
-            this.tbf_ChequeVacances = new EasyJudoClub.TextBoxField();
-            this.tbf_Liquide = new EasyJudoClub.TextBoxField();
-            this.tbf_ChequierJeune = new EasyJudoClub.TextBoxField();
-            this.tbf_Cheque = new EasyJudoClub.TextBoxField();
-            this.tbf_Cotisation = new EasyJudoClub.TextBoxField();
-            this.cbf_Arbitre = new EasyJudoClub.Controls.CheckBoxField();
-            this.df_DateEntreeClub = new EasyJudoClub.Controls.DateField();
-            this.cbf_CommissaireSportif = new EasyJudoClub.Controls.CheckBoxField();
-            this.tbf_PrenomMere = new EasyJudoClub.TextBoxField();
-            this.tbf_NomMere = new EasyJudoClub.TextBoxField();
-            this.tbf_PrenomPere = new EasyJudoClub.TextBoxField();
-            this.tbf_NomPere = new EasyJudoClub.TextBoxField();
-            this.tbf_TelFixe = new EasyJudoClub.TextBoxField();
-            this.tbf_TelPortable = new EasyJudoClub.TextBoxField();
-            this.tbf_Email = new EasyJudoClub.TextBoxField();
-            this.tbf_CodePostal = new EasyJudoClub.TextBoxField();
-            this.tbf_Adresse = new EasyJudoClub.TextBoxField();
             this.cbf_categorie = new EasyJudoClub.ComboBoxField();
             this.tbf_Age = new EasyJudoClub.TextBoxField();
             this.tbf_LicenceNumber = new EasyJudoClub.TextBoxField();
@@ -68,6 +38,36 @@
             this.cbf_Sexe = new EasyJudoClub.ComboBoxField();
             this.tbf_Prenom = new EasyJudoClub.TextBoxField();
             this.tbf_Nom = new EasyJudoClub.TextBoxField();
+            this.gb_adresse = new System.Windows.Forms.GroupBox();
+            this.lbl_Commune = new System.Windows.Forms.Label();
+            this.cbb_Commune = new System.Windows.Forms.ComboBox();
+            this.tbf_TelFixe = new EasyJudoClub.TextBoxField();
+            this.tbf_TelPortable = new EasyJudoClub.TextBoxField();
+            this.tbf_Email = new EasyJudoClub.TextBoxField();
+            this.tbf_CodePostal = new EasyJudoClub.TextBoxField();
+            this.tbf_Adresse = new EasyJudoClub.TextBoxField();
+            this.gb_parents = new System.Windows.Forms.GroupBox();
+            this.tbf_PrenomMere = new EasyJudoClub.TextBoxField();
+            this.tbf_NomMere = new EasyJudoClub.TextBoxField();
+            this.tbf_PrenomPere = new EasyJudoClub.TextBoxField();
+            this.tbf_NomPere = new EasyJudoClub.TextBoxField();
+            this.gb_divers = new System.Windows.Forms.GroupBox();
+            this.cbf_Arbitre = new EasyJudoClub.Controls.CheckBoxField();
+            this.df_DateEntreeClub = new EasyJudoClub.Controls.DateField();
+            this.cbf_CommissaireSportif = new EasyJudoClub.Controls.CheckBoxField();
+            this.gb_reglement = new System.Windows.Forms.GroupBox();
+            this.tbf_CarteMRA = new EasyJudoClub.TextBoxField();
+            this.tbf_ChequeVacances = new EasyJudoClub.TextBoxField();
+            this.tbf_Liquide = new EasyJudoClub.TextBoxField();
+            this.tbf_ChequierJeune = new EasyJudoClub.TextBoxField();
+            this.tbf_Cheque = new EasyJudoClub.TextBoxField();
+            this.tbf_Cotisation = new EasyJudoClub.TextBoxField();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tbf_TelMedecin = new EasyJudoClub.TextBoxField();
+            this.tbf_NomMedecin = new EasyJudoClub.TextBoxField();
+            this.btn_OK = new System.Windows.Forms.Button();
+            this.btn_Cancel = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gb_identite.SuspendLayout();
             this.gb_adresse.SuspendLayout();
             this.gb_parents.SuspendLayout();
@@ -93,323 +93,6 @@
             this.gb_identite.TabIndex = 0;
             this.gb_identite.TabStop = false;
             this.gb_identite.Text = "Identité";
-            // 
-            // gb_adresse
-            // 
-            this.gb_adresse.Controls.Add(this.lbl_Commune);
-            this.gb_adresse.Controls.Add(this.cbb_Commune);
-            this.gb_adresse.Controls.Add(this.tbf_TelFixe);
-            this.gb_adresse.Controls.Add(this.tbf_TelPortable);
-            this.gb_adresse.Controls.Add(this.tbf_Email);
-            this.gb_adresse.Controls.Add(this.tbf_CodePostal);
-            this.gb_adresse.Controls.Add(this.tbf_Adresse);
-            this.gb_adresse.Location = new System.Drawing.Point(18, 325);
-            this.gb_adresse.Name = "gb_adresse";
-            this.gb_adresse.Size = new System.Drawing.Size(312, 241);
-            this.gb_adresse.TabIndex = 2;
-            this.gb_adresse.TabStop = false;
-            this.gb_adresse.Text = "Adresse";
-            // 
-            // lbl_Commune
-            // 
-            this.lbl_Commune.AutoSize = true;
-            this.lbl_Commune.Location = new System.Drawing.Point(6, 93);
-            this.lbl_Commune.Name = "lbl_Commune";
-            this.lbl_Commune.Size = new System.Drawing.Size(54, 13);
-            this.lbl_Commune.TabIndex = 7;
-            this.lbl_Commune.Text = "Commune";
-            // 
-            // cbb_Commune
-            // 
-            this.cbb_Commune.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbb_Commune.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbb_Commune.FormattingEnabled = true;
-            this.cbb_Commune.Location = new System.Drawing.Point(79, 90);
-            this.cbb_Commune.Name = "cbb_Commune";
-            this.cbb_Commune.Size = new System.Drawing.Size(217, 21);
-            this.cbb_Commune.TabIndex = 2;
-            this.cbb_Commune.Validated += new System.EventHandler(this.cbb_Commune_Validated);
-            // 
-            // gb_parents
-            // 
-            this.gb_parents.Controls.Add(this.tbf_PrenomMere);
-            this.gb_parents.Controls.Add(this.tbf_NomMere);
-            this.gb_parents.Controls.Add(this.tbf_PrenomPere);
-            this.gb_parents.Controls.Add(this.tbf_NomPere);
-            this.gb_parents.Location = new System.Drawing.Point(12, 223);
-            this.gb_parents.Name = "gb_parents";
-            this.gb_parents.Size = new System.Drawing.Size(629, 96);
-            this.gb_parents.TabIndex = 1;
-            this.gb_parents.TabStop = false;
-            this.gb_parents.Text = "Parents";
-            // 
-            // gb_divers
-            // 
-            this.gb_divers.Controls.Add(this.cbf_Arbitre);
-            this.gb_divers.Controls.Add(this.df_DateEntreeClub);
-            this.gb_divers.Controls.Add(this.cbf_CommissaireSportif);
-            this.gb_divers.Location = new System.Drawing.Point(647, 12);
-            this.gb_divers.Name = "gb_divers";
-            this.gb_divers.Size = new System.Drawing.Size(331, 97);
-            this.gb_divers.TabIndex = 4;
-            this.gb_divers.TabStop = false;
-            this.gb_divers.Text = "Divers";
-            // 
-            // gb_reglement
-            // 
-            this.gb_reglement.Controls.Add(this.tbf_CarteMRA);
-            this.gb_reglement.Controls.Add(this.tbf_ChequeVacances);
-            this.gb_reglement.Controls.Add(this.tbf_Liquide);
-            this.gb_reglement.Controls.Add(this.tbf_ChequierJeune);
-            this.gb_reglement.Controls.Add(this.tbf_Cheque);
-            this.gb_reglement.Controls.Add(this.tbf_Cotisation);
-            this.gb_reglement.Location = new System.Drawing.Point(336, 325);
-            this.gb_reglement.Name = "gb_reglement";
-            this.gb_reglement.Size = new System.Drawing.Size(311, 241);
-            this.gb_reglement.TabIndex = 3;
-            this.gb_reglement.TabStop = false;
-            this.gb_reglement.Text = "Règlement";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.tbf_TelMedecin);
-            this.groupBox1.Controls.Add(this.tbf_NomMedecin);
-            this.groupBox1.Location = new System.Drawing.Point(647, 117);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(331, 93);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Certificat médical";
-            // 
-            // btn_OK
-            // 
-            this.btn_OK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btn_OK.Location = new System.Drawing.Point(664, 534);
-            this.btn_OK.Name = "btn_OK";
-            this.btn_OK.Size = new System.Drawing.Size(143, 32);
-            this.btn_OK.TabIndex = 6;
-            this.btn_OK.Text = "Enregister";
-            this.btn_OK.UseVisualStyleBackColor = true;
-            this.btn_OK.Click += new System.EventHandler(this.btn_OK_Click);
-            // 
-            // btn_Cancel
-            // 
-            this.btn_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btn_Cancel.Location = new System.Drawing.Point(841, 534);
-            this.btn_Cancel.Name = "btn_Cancel";
-            this.btn_Cancel.Size = new System.Drawing.Size(143, 32);
-            this.btn_Cancel.TabIndex = 7;
-            this.btn_Cancel.Text = "Quitter";
-            this.btn_Cancel.UseVisualStyleBackColor = true;
-            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(678, 224);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(279, 294);
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
-            // 
-            // tbf_TelMedecin
-            // 
-            this.tbf_TelMedecin.Label = "Tel";
-            this.tbf_TelMedecin.Location = new System.Drawing.Point(6, 55);
-            this.tbf_TelMedecin.Name = "tbf_TelMedecin";
-            this.tbf_TelMedecin.ReadOnly = false;
-            this.tbf_TelMedecin.Size = new System.Drawing.Size(285, 27);
-            this.tbf_TelMedecin.TabIndex = 1;
-            this.tbf_TelMedecin.Validated += new System.EventHandler(this.tbf_TelMedecin_Validated);
-            // 
-            // tbf_NomMedecin
-            // 
-            this.tbf_NomMedecin.Label = "Nom";
-            this.tbf_NomMedecin.Location = new System.Drawing.Point(6, 22);
-            this.tbf_NomMedecin.Name = "tbf_NomMedecin";
-            this.tbf_NomMedecin.ReadOnly = false;
-            this.tbf_NomMedecin.Size = new System.Drawing.Size(279, 27);
-            this.tbf_NomMedecin.TabIndex = 0;
-            this.tbf_NomMedecin.Validated += new System.EventHandler(this.tbf_NomMedecin_Validated);
-            // 
-            // tbf_CarteMRA
-            // 
-            this.tbf_CarteMRA.Label = "Carte MRA";
-            this.tbf_CarteMRA.Location = new System.Drawing.Point(6, 202);
-            this.tbf_CarteMRA.Name = "tbf_CarteMRA";
-            this.tbf_CarteMRA.ReadOnly = false;
-            this.tbf_CarteMRA.Size = new System.Drawing.Size(287, 28);
-            this.tbf_CarteMRA.TabIndex = 13;
-            this.tbf_CarteMRA.Validated += new System.EventHandler(this.tbf_CarteMRA_Validated);
-            // 
-            // tbf_ChequeVacances
-            // 
-            this.tbf_ChequeVacances.Label = "Ch. vacances";
-            this.tbf_ChequeVacances.Location = new System.Drawing.Point(6, 134);
-            this.tbf_ChequeVacances.Name = "tbf_ChequeVacances";
-            this.tbf_ChequeVacances.ReadOnly = false;
-            this.tbf_ChequeVacances.Size = new System.Drawing.Size(287, 28);
-            this.tbf_ChequeVacances.TabIndex = 11;
-            this.tbf_ChequeVacances.Validated += new System.EventHandler(this.tbf_ChequeVacances_Validated);
-            // 
-            // tbf_Liquide
-            // 
-            this.tbf_Liquide.Label = "Liquide";
-            this.tbf_Liquide.Location = new System.Drawing.Point(6, 100);
-            this.tbf_Liquide.Name = "tbf_Liquide";
-            this.tbf_Liquide.ReadOnly = false;
-            this.tbf_Liquide.Size = new System.Drawing.Size(287, 28);
-            this.tbf_Liquide.TabIndex = 10;
-            this.tbf_Liquide.Validated += new System.EventHandler(this.tbf_Liquide_Validated);
-            // 
-            // tbf_ChequierJeune
-            // 
-            this.tbf_ChequierJeune.Label = "Ch. jeune";
-            this.tbf_ChequierJeune.Location = new System.Drawing.Point(6, 168);
-            this.tbf_ChequierJeune.Name = "tbf_ChequierJeune";
-            this.tbf_ChequierJeune.ReadOnly = false;
-            this.tbf_ChequierJeune.Size = new System.Drawing.Size(287, 28);
-            this.tbf_ChequierJeune.TabIndex = 12;
-            this.tbf_ChequierJeune.Validated += new System.EventHandler(this.tbf_ChequeJeune_Validated);
-            // 
-            // tbf_Cheque
-            // 
-            this.tbf_Cheque.Label = "Chèque";
-            this.tbf_Cheque.Location = new System.Drawing.Point(6, 66);
-            this.tbf_Cheque.Name = "tbf_Cheque";
-            this.tbf_Cheque.ReadOnly = false;
-            this.tbf_Cheque.Size = new System.Drawing.Size(287, 28);
-            this.tbf_Cheque.TabIndex = 9;
-            this.tbf_Cheque.Validated += new System.EventHandler(this.tbf_Cheque_Validated);
-            // 
-            // tbf_Cotisation
-            // 
-            this.tbf_Cotisation.Label = "Cotisation";
-            this.tbf_Cotisation.Location = new System.Drawing.Point(6, 33);
-            this.tbf_Cotisation.Name = "tbf_Cotisation";
-            this.tbf_Cotisation.ReadOnly = true;
-            this.tbf_Cotisation.Size = new System.Drawing.Size(287, 27);
-            this.tbf_Cotisation.TabIndex = 8;
-            // 
-            // cbf_Arbitre
-            // 
-            this.cbf_Arbitre.Label = "Arbitre";
-            this.cbf_Arbitre.Location = new System.Drawing.Point(190, 22);
-            this.cbf_Arbitre.Name = "cbf_Arbitre";
-            this.cbf_Arbitre.Size = new System.Drawing.Size(92, 27);
-            this.cbf_Arbitre.TabIndex = 1;
-            this.cbf_Arbitre.Value = false;
-            this.cbf_Arbitre.Validated += new System.EventHandler(this.cbf_Arbitre_Validated);
-            // 
-            // df_DateEntreeClub
-            // 
-            this.df_DateEntreeClub.Date = new System.DateTime(2012, 7, 10, 7, 36, 23, 693);
-            this.df_DateEntreeClub.Label = "Date entrée au club";
-            this.df_DateEntreeClub.Location = new System.Drawing.Point(6, 55);
-            this.df_DateEntreeClub.Name = "df_DateEntreeClub";
-            this.df_DateEntreeClub.Size = new System.Drawing.Size(315, 27);
-            this.df_DateEntreeClub.TabIndex = 2;
-            this.df_DateEntreeClub.Validated += new System.EventHandler(this.df_DateEntreeClub_Validated);
-            // 
-            // cbf_CommissaireSportif
-            // 
-            this.cbf_CommissaireSportif.Label = "Commissaire sportif";
-            this.cbf_CommissaireSportif.Location = new System.Drawing.Point(6, 22);
-            this.cbf_CommissaireSportif.Name = "cbf_CommissaireSportif";
-            this.cbf_CommissaireSportif.Size = new System.Drawing.Size(127, 27);
-            this.cbf_CommissaireSportif.TabIndex = 0;
-            this.cbf_CommissaireSportif.Value = false;
-            this.cbf_CommissaireSportif.Validated += new System.EventHandler(this.cbf_CommissaireSportif_Validated);
-            // 
-            // tbf_PrenomMere
-            // 
-            this.tbf_PrenomMere.Label = "Prénom Mère";
-            this.tbf_PrenomMere.Location = new System.Drawing.Point(308, 52);
-            this.tbf_PrenomMere.Name = "tbf_PrenomMere";
-            this.tbf_PrenomMere.ReadOnly = false;
-            this.tbf_PrenomMere.Size = new System.Drawing.Size(296, 27);
-            this.tbf_PrenomMere.TabIndex = 3;
-            this.tbf_PrenomMere.Validated += new System.EventHandler(this.tbf_PrenomMere_Validated);
-            // 
-            // tbf_NomMere
-            // 
-            this.tbf_NomMere.Label = "Nom Mère";
-            this.tbf_NomMere.Location = new System.Drawing.Point(6, 52);
-            this.tbf_NomMere.Name = "tbf_NomMere";
-            this.tbf_NomMere.ReadOnly = false;
-            this.tbf_NomMere.Size = new System.Drawing.Size(296, 27);
-            this.tbf_NomMere.TabIndex = 2;
-            this.tbf_NomMere.Validated += new System.EventHandler(this.tbf_NomMere_Validated);
-            // 
-            // tbf_PrenomPere
-            // 
-            this.tbf_PrenomPere.Label = "Prénom Père";
-            this.tbf_PrenomPere.Location = new System.Drawing.Point(308, 19);
-            this.tbf_PrenomPere.Name = "tbf_PrenomPere";
-            this.tbf_PrenomPere.ReadOnly = false;
-            this.tbf_PrenomPere.Size = new System.Drawing.Size(296, 27);
-            this.tbf_PrenomPere.TabIndex = 1;
-            this.tbf_PrenomPere.Validated += new System.EventHandler(this.tbf_PrenomPere_Validated);
-            // 
-            // tbf_NomPere
-            // 
-            this.tbf_NomPere.Label = "Nom Père";
-            this.tbf_NomPere.Location = new System.Drawing.Point(6, 19);
-            this.tbf_NomPere.Name = "tbf_NomPere";
-            this.tbf_NomPere.ReadOnly = false;
-            this.tbf_NomPere.Size = new System.Drawing.Size(296, 27);
-            this.tbf_NomPere.TabIndex = 0;
-            this.tbf_NomPere.Validated += new System.EventHandler(this.tbf_NomPere_Validated);
-            // 
-            // tbf_TelFixe
-            // 
-            this.tbf_TelFixe.Label = "Tel fixe";
-            this.tbf_TelFixe.Location = new System.Drawing.Point(6, 171);
-            this.tbf_TelFixe.Name = "tbf_TelFixe";
-            this.tbf_TelFixe.ReadOnly = false;
-            this.tbf_TelFixe.Size = new System.Drawing.Size(296, 27);
-            this.tbf_TelFixe.TabIndex = 4;
-            this.tbf_TelFixe.Validated += new System.EventHandler(this.tbf_TelFixe_Validated);
-            // 
-            // tbf_TelPortable
-            // 
-            this.tbf_TelPortable.Label = "Tel portable";
-            this.tbf_TelPortable.Location = new System.Drawing.Point(6, 204);
-            this.tbf_TelPortable.Name = "tbf_TelPortable";
-            this.tbf_TelPortable.ReadOnly = false;
-            this.tbf_TelPortable.Size = new System.Drawing.Size(296, 27);
-            this.tbf_TelPortable.TabIndex = 5;
-            this.tbf_TelPortable.Validated += new System.EventHandler(this.tbf_TelPortable_Validated);
-            // 
-            // tbf_Email
-            // 
-            this.tbf_Email.Label = "Email";
-            this.tbf_Email.Location = new System.Drawing.Point(6, 138);
-            this.tbf_Email.Name = "tbf_Email";
-            this.tbf_Email.ReadOnly = false;
-            this.tbf_Email.Size = new System.Drawing.Size(296, 27);
-            this.tbf_Email.TabIndex = 3;
-            this.tbf_Email.Validated += new System.EventHandler(this.tbf_email_Validated);
-            // 
-            // tbf_CodePostal
-            // 
-            this.tbf_CodePostal.Label = "Code postal";
-            this.tbf_CodePostal.Location = new System.Drawing.Point(6, 55);
-            this.tbf_CodePostal.Name = "tbf_CodePostal";
-            this.tbf_CodePostal.ReadOnly = false;
-            this.tbf_CodePostal.Size = new System.Drawing.Size(296, 27);
-            this.tbf_CodePostal.TabIndex = 1;
-            this.tbf_CodePostal.Validated += new System.EventHandler(this.tbf_CodePostal_Validated);
-            // 
-            // tbf_Adresse
-            // 
-            this.tbf_Adresse.Label = "Adresse";
-            this.tbf_Adresse.Location = new System.Drawing.Point(6, 22);
-            this.tbf_Adresse.Name = "tbf_Adresse";
-            this.tbf_Adresse.ReadOnly = false;
-            this.tbf_Adresse.Size = new System.Drawing.Size(296, 27);
-            this.tbf_Adresse.TabIndex = 0;
-            this.tbf_Adresse.Validated += new System.EventHandler(this.tbf_Adresse_Validated);
             // 
             // cbf_categorie
             // 
@@ -495,6 +178,323 @@
             this.tbf_Nom.Size = new System.Drawing.Size(296, 27);
             this.tbf_Nom.TabIndex = 0;
             this.tbf_Nom.Validated += new System.EventHandler(this.tbf_Nom_Validated);
+            // 
+            // gb_adresse
+            // 
+            this.gb_adresse.Controls.Add(this.lbl_Commune);
+            this.gb_adresse.Controls.Add(this.cbb_Commune);
+            this.gb_adresse.Controls.Add(this.tbf_TelFixe);
+            this.gb_adresse.Controls.Add(this.tbf_TelPortable);
+            this.gb_adresse.Controls.Add(this.tbf_Email);
+            this.gb_adresse.Controls.Add(this.tbf_CodePostal);
+            this.gb_adresse.Controls.Add(this.tbf_Adresse);
+            this.gb_adresse.Location = new System.Drawing.Point(12, 325);
+            this.gb_adresse.Name = "gb_adresse";
+            this.gb_adresse.Size = new System.Drawing.Size(312, 241);
+            this.gb_adresse.TabIndex = 2;
+            this.gb_adresse.TabStop = false;
+            this.gb_adresse.Text = "Adresse";
+            // 
+            // lbl_Commune
+            // 
+            this.lbl_Commune.AutoSize = true;
+            this.lbl_Commune.Location = new System.Drawing.Point(6, 93);
+            this.lbl_Commune.Name = "lbl_Commune";
+            this.lbl_Commune.Size = new System.Drawing.Size(54, 13);
+            this.lbl_Commune.TabIndex = 7;
+            this.lbl_Commune.Text = "Commune";
+            // 
+            // cbb_Commune
+            // 
+            this.cbb_Commune.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbb_Commune.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbb_Commune.FormattingEnabled = true;
+            this.cbb_Commune.Location = new System.Drawing.Point(79, 90);
+            this.cbb_Commune.Name = "cbb_Commune";
+            this.cbb_Commune.Size = new System.Drawing.Size(217, 21);
+            this.cbb_Commune.TabIndex = 2;
+            this.cbb_Commune.Validated += new System.EventHandler(this.cbb_Commune_Validated);
+            // 
+            // tbf_TelFixe
+            // 
+            this.tbf_TelFixe.Label = "Tel fixe";
+            this.tbf_TelFixe.Location = new System.Drawing.Point(6, 171);
+            this.tbf_TelFixe.Name = "tbf_TelFixe";
+            this.tbf_TelFixe.ReadOnly = false;
+            this.tbf_TelFixe.Size = new System.Drawing.Size(296, 27);
+            this.tbf_TelFixe.TabIndex = 4;
+            this.tbf_TelFixe.Validated += new System.EventHandler(this.tbf_TelFixe_Validated);
+            // 
+            // tbf_TelPortable
+            // 
+            this.tbf_TelPortable.Label = "Tel portable";
+            this.tbf_TelPortable.Location = new System.Drawing.Point(6, 204);
+            this.tbf_TelPortable.Name = "tbf_TelPortable";
+            this.tbf_TelPortable.ReadOnly = false;
+            this.tbf_TelPortable.Size = new System.Drawing.Size(296, 27);
+            this.tbf_TelPortable.TabIndex = 5;
+            this.tbf_TelPortable.Validated += new System.EventHandler(this.tbf_TelPortable_Validated);
+            // 
+            // tbf_Email
+            // 
+            this.tbf_Email.Label = "Email";
+            this.tbf_Email.Location = new System.Drawing.Point(6, 138);
+            this.tbf_Email.Name = "tbf_Email";
+            this.tbf_Email.ReadOnly = false;
+            this.tbf_Email.Size = new System.Drawing.Size(296, 27);
+            this.tbf_Email.TabIndex = 3;
+            this.tbf_Email.Validated += new System.EventHandler(this.tbf_email_Validated);
+            // 
+            // tbf_CodePostal
+            // 
+            this.tbf_CodePostal.Label = "Code postal";
+            this.tbf_CodePostal.Location = new System.Drawing.Point(6, 55);
+            this.tbf_CodePostal.Name = "tbf_CodePostal";
+            this.tbf_CodePostal.ReadOnly = false;
+            this.tbf_CodePostal.Size = new System.Drawing.Size(296, 27);
+            this.tbf_CodePostal.TabIndex = 1;
+            this.tbf_CodePostal.Validated += new System.EventHandler(this.tbf_CodePostal_Validated);
+            // 
+            // tbf_Adresse
+            // 
+            this.tbf_Adresse.Label = "Adresse";
+            this.tbf_Adresse.Location = new System.Drawing.Point(6, 22);
+            this.tbf_Adresse.Name = "tbf_Adresse";
+            this.tbf_Adresse.ReadOnly = false;
+            this.tbf_Adresse.Size = new System.Drawing.Size(296, 27);
+            this.tbf_Adresse.TabIndex = 0;
+            this.tbf_Adresse.Validated += new System.EventHandler(this.tbf_Adresse_Validated);
+            // 
+            // gb_parents
+            // 
+            this.gb_parents.Controls.Add(this.tbf_PrenomMere);
+            this.gb_parents.Controls.Add(this.tbf_NomMere);
+            this.gb_parents.Controls.Add(this.tbf_PrenomPere);
+            this.gb_parents.Controls.Add(this.tbf_NomPere);
+            this.gb_parents.Location = new System.Drawing.Point(12, 223);
+            this.gb_parents.Name = "gb_parents";
+            this.gb_parents.Size = new System.Drawing.Size(629, 96);
+            this.gb_parents.TabIndex = 1;
+            this.gb_parents.TabStop = false;
+            this.gb_parents.Text = "Parents";
+            // 
+            // tbf_PrenomMere
+            // 
+            this.tbf_PrenomMere.Label = "Prénom Mère";
+            this.tbf_PrenomMere.Location = new System.Drawing.Point(308, 52);
+            this.tbf_PrenomMere.Name = "tbf_PrenomMere";
+            this.tbf_PrenomMere.ReadOnly = false;
+            this.tbf_PrenomMere.Size = new System.Drawing.Size(296, 27);
+            this.tbf_PrenomMere.TabIndex = 3;
+            this.tbf_PrenomMere.Validated += new System.EventHandler(this.tbf_PrenomMere_Validated);
+            // 
+            // tbf_NomMere
+            // 
+            this.tbf_NomMere.Label = "Nom Mère";
+            this.tbf_NomMere.Location = new System.Drawing.Point(6, 52);
+            this.tbf_NomMere.Name = "tbf_NomMere";
+            this.tbf_NomMere.ReadOnly = false;
+            this.tbf_NomMere.Size = new System.Drawing.Size(296, 27);
+            this.tbf_NomMere.TabIndex = 2;
+            this.tbf_NomMere.Validated += new System.EventHandler(this.tbf_NomMere_Validated);
+            // 
+            // tbf_PrenomPere
+            // 
+            this.tbf_PrenomPere.Label = "Prénom Père";
+            this.tbf_PrenomPere.Location = new System.Drawing.Point(308, 19);
+            this.tbf_PrenomPere.Name = "tbf_PrenomPere";
+            this.tbf_PrenomPere.ReadOnly = false;
+            this.tbf_PrenomPere.Size = new System.Drawing.Size(296, 27);
+            this.tbf_PrenomPere.TabIndex = 1;
+            this.tbf_PrenomPere.Validated += new System.EventHandler(this.tbf_PrenomPere_Validated);
+            // 
+            // tbf_NomPere
+            // 
+            this.tbf_NomPere.Label = "Nom Père";
+            this.tbf_NomPere.Location = new System.Drawing.Point(6, 19);
+            this.tbf_NomPere.Name = "tbf_NomPere";
+            this.tbf_NomPere.ReadOnly = false;
+            this.tbf_NomPere.Size = new System.Drawing.Size(296, 27);
+            this.tbf_NomPere.TabIndex = 0;
+            this.tbf_NomPere.Validated += new System.EventHandler(this.tbf_NomPere_Validated);
+            // 
+            // gb_divers
+            // 
+            this.gb_divers.Controls.Add(this.cbf_Arbitre);
+            this.gb_divers.Controls.Add(this.df_DateEntreeClub);
+            this.gb_divers.Controls.Add(this.cbf_CommissaireSportif);
+            this.gb_divers.Location = new System.Drawing.Point(647, 12);
+            this.gb_divers.Name = "gb_divers";
+            this.gb_divers.Size = new System.Drawing.Size(331, 97);
+            this.gb_divers.TabIndex = 4;
+            this.gb_divers.TabStop = false;
+            this.gb_divers.Text = "Divers";
+            // 
+            // cbf_Arbitre
+            // 
+            this.cbf_Arbitre.Label = "Arbitre";
+            this.cbf_Arbitre.Location = new System.Drawing.Point(190, 22);
+            this.cbf_Arbitre.Name = "cbf_Arbitre";
+            this.cbf_Arbitre.Size = new System.Drawing.Size(92, 27);
+            this.cbf_Arbitre.TabIndex = 1;
+            this.cbf_Arbitre.Value = false;
+            this.cbf_Arbitre.Validated += new System.EventHandler(this.cbf_Arbitre_Validated);
+            // 
+            // df_DateEntreeClub
+            // 
+            this.df_DateEntreeClub.Date = new System.DateTime(2012, 7, 10, 7, 36, 23, 693);
+            this.df_DateEntreeClub.Label = "Date entrée au club";
+            this.df_DateEntreeClub.Location = new System.Drawing.Point(6, 55);
+            this.df_DateEntreeClub.Name = "df_DateEntreeClub";
+            this.df_DateEntreeClub.Size = new System.Drawing.Size(315, 27);
+            this.df_DateEntreeClub.TabIndex = 2;
+            this.df_DateEntreeClub.Validated += new System.EventHandler(this.df_DateEntreeClub_Validated);
+            // 
+            // cbf_CommissaireSportif
+            // 
+            this.cbf_CommissaireSportif.Label = "Commissaire sportif";
+            this.cbf_CommissaireSportif.Location = new System.Drawing.Point(6, 22);
+            this.cbf_CommissaireSportif.Name = "cbf_CommissaireSportif";
+            this.cbf_CommissaireSportif.Size = new System.Drawing.Size(127, 27);
+            this.cbf_CommissaireSportif.TabIndex = 0;
+            this.cbf_CommissaireSportif.Value = false;
+            this.cbf_CommissaireSportif.Validated += new System.EventHandler(this.cbf_CommissaireSportif_Validated);
+            // 
+            // gb_reglement
+            // 
+            this.gb_reglement.Controls.Add(this.tbf_CarteMRA);
+            this.gb_reglement.Controls.Add(this.tbf_ChequeVacances);
+            this.gb_reglement.Controls.Add(this.tbf_Liquide);
+            this.gb_reglement.Controls.Add(this.tbf_ChequierJeune);
+            this.gb_reglement.Controls.Add(this.tbf_Cheque);
+            this.gb_reglement.Controls.Add(this.tbf_Cotisation);
+            this.gb_reglement.Location = new System.Drawing.Point(336, 325);
+            this.gb_reglement.Name = "gb_reglement";
+            this.gb_reglement.Size = new System.Drawing.Size(311, 241);
+            this.gb_reglement.TabIndex = 3;
+            this.gb_reglement.TabStop = false;
+            this.gb_reglement.Text = "Règlement";
+            // 
+            // tbf_CarteMRA
+            // 
+            this.tbf_CarteMRA.Label = "Carte MRA";
+            this.tbf_CarteMRA.Location = new System.Drawing.Point(6, 202);
+            this.tbf_CarteMRA.Name = "tbf_CarteMRA";
+            this.tbf_CarteMRA.ReadOnly = false;
+            this.tbf_CarteMRA.Size = new System.Drawing.Size(287, 28);
+            this.tbf_CarteMRA.TabIndex = 13;
+            this.tbf_CarteMRA.Validated += new System.EventHandler(this.tbf_CarteMRA_Validated);
+            // 
+            // tbf_ChequeVacances
+            // 
+            this.tbf_ChequeVacances.Label = "Ch. vacances";
+            this.tbf_ChequeVacances.Location = new System.Drawing.Point(6, 134);
+            this.tbf_ChequeVacances.Name = "tbf_ChequeVacances";
+            this.tbf_ChequeVacances.ReadOnly = false;
+            this.tbf_ChequeVacances.Size = new System.Drawing.Size(287, 28);
+            this.tbf_ChequeVacances.TabIndex = 11;
+            this.tbf_ChequeVacances.Validated += new System.EventHandler(this.tbf_ChequeVacances_Validated);
+            // 
+            // tbf_Liquide
+            // 
+            this.tbf_Liquide.Label = "Liquide";
+            this.tbf_Liquide.Location = new System.Drawing.Point(6, 100);
+            this.tbf_Liquide.Name = "tbf_Liquide";
+            this.tbf_Liquide.ReadOnly = false;
+            this.tbf_Liquide.Size = new System.Drawing.Size(287, 28);
+            this.tbf_Liquide.TabIndex = 10;
+            this.tbf_Liquide.Validated += new System.EventHandler(this.tbf_Liquide_Validated);
+            // 
+            // tbf_ChequierJeune
+            // 
+            this.tbf_ChequierJeune.Label = "Ch. jeune";
+            this.tbf_ChequierJeune.Location = new System.Drawing.Point(6, 168);
+            this.tbf_ChequierJeune.Name = "tbf_ChequierJeune";
+            this.tbf_ChequierJeune.ReadOnly = false;
+            this.tbf_ChequierJeune.Size = new System.Drawing.Size(287, 28);
+            this.tbf_ChequierJeune.TabIndex = 12;
+            this.tbf_ChequierJeune.Validated += new System.EventHandler(this.tbf_ChequeJeune_Validated);
+            // 
+            // tbf_Cheque
+            // 
+            this.tbf_Cheque.Label = "Chèque";
+            this.tbf_Cheque.Location = new System.Drawing.Point(6, 66);
+            this.tbf_Cheque.Name = "tbf_Cheque";
+            this.tbf_Cheque.ReadOnly = false;
+            this.tbf_Cheque.Size = new System.Drawing.Size(287, 28);
+            this.tbf_Cheque.TabIndex = 9;
+            this.tbf_Cheque.Validated += new System.EventHandler(this.tbf_Cheque_Validated);
+            // 
+            // tbf_Cotisation
+            // 
+            this.tbf_Cotisation.Label = "Cotisation";
+            this.tbf_Cotisation.Location = new System.Drawing.Point(6, 33);
+            this.tbf_Cotisation.Name = "tbf_Cotisation";
+            this.tbf_Cotisation.ReadOnly = true;
+            this.tbf_Cotisation.Size = new System.Drawing.Size(287, 27);
+            this.tbf_Cotisation.TabIndex = 8;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.tbf_TelMedecin);
+            this.groupBox1.Controls.Add(this.tbf_NomMedecin);
+            this.groupBox1.Location = new System.Drawing.Point(647, 117);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(331, 93);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Certificat médical";
+            // 
+            // tbf_TelMedecin
+            // 
+            this.tbf_TelMedecin.Label = "Tel";
+            this.tbf_TelMedecin.Location = new System.Drawing.Point(6, 55);
+            this.tbf_TelMedecin.Name = "tbf_TelMedecin";
+            this.tbf_TelMedecin.ReadOnly = false;
+            this.tbf_TelMedecin.Size = new System.Drawing.Size(285, 27);
+            this.tbf_TelMedecin.TabIndex = 1;
+            this.tbf_TelMedecin.Validated += new System.EventHandler(this.tbf_TelMedecin_Validated);
+            // 
+            // tbf_NomMedecin
+            // 
+            this.tbf_NomMedecin.Label = "Nom";
+            this.tbf_NomMedecin.Location = new System.Drawing.Point(6, 22);
+            this.tbf_NomMedecin.Name = "tbf_NomMedecin";
+            this.tbf_NomMedecin.ReadOnly = false;
+            this.tbf_NomMedecin.Size = new System.Drawing.Size(279, 27);
+            this.tbf_NomMedecin.TabIndex = 0;
+            this.tbf_NomMedecin.Validated += new System.EventHandler(this.tbf_NomMedecin_Validated);
+            // 
+            // btn_OK
+            // 
+            this.btn_OK.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btn_OK.Location = new System.Drawing.Point(664, 534);
+            this.btn_OK.Name = "btn_OK";
+            this.btn_OK.Size = new System.Drawing.Size(143, 32);
+            this.btn_OK.TabIndex = 6;
+            this.btn_OK.Text = "Enregister";
+            this.btn_OK.UseVisualStyleBackColor = true;
+            this.btn_OK.Click += new System.EventHandler(this.btn_OK_Click);
+            // 
+            // btn_Cancel
+            // 
+            this.btn_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btn_Cancel.Location = new System.Drawing.Point(841, 534);
+            this.btn_Cancel.Name = "btn_Cancel";
+            this.btn_Cancel.Size = new System.Drawing.Size(143, 32);
+            this.btn_Cancel.TabIndex = 7;
+            this.btn_Cancel.Text = "Quitter";
+            this.btn_Cancel.UseVisualStyleBackColor = true;
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(678, 224);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(279, 294);
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmLicencie
             // 

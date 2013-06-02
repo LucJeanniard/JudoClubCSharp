@@ -39,6 +39,12 @@
     <Reference Include="moq">
       <HintPath>..\Lib\moq.dll</HintPath>
     </Reference>
+    <Reference Include="PdfSharp">
+      <HintPath>..\packages\PDFsharp.1.32.3057.0\lib\net20\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting">
+      <HintPath>..\packages\PDFsharp.1.32.3057.0\lib\net20\PdfSharp.Charting.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -65,12 +71,16 @@
     <Compile Include="EasyJudoClubControlerTest.cs" />
     <Compile Include="MemberTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MemberPrintTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EasyJudoClub\EasyJudoClub.csproj">
       <Project>{B68ADAA5-2F0B-48F9-958B-269A2D25AA15}</Project>
       <Name>EasyJudoClub</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

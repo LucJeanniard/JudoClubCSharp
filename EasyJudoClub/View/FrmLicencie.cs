@@ -29,6 +29,12 @@ namespace EasyJudoClub
             }
         }
 
+        public void HideButtons()
+        {
+            btn_OK.Visible = false;
+            btn_Cancel.Visible = false;
+        }
+
         private void UpdateForm()
         {
             tbf_Adresse.Text = _member.Adresse;
