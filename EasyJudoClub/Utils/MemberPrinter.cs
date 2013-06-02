@@ -16,22 +16,16 @@ namespace EasyJudoClub.Utils
     public class MemberPrinter
     {
 
-       public static void Print(Member member)
-       {
-           using (var folderBrowser = new FolderBrowserDialog())
-           {
-               if (folderBrowser.ShowDialog() == DialogResult.OK)
-               {
-                   var path = folderBrowser.SelectedPath;
-                   var errorMessage = "";
-                   PrintAsPdf(member, path, out errorMessage);
-                   var filePath = GetPdfFileName(member, path);
-                   using (var process = Process.Start(filePath)) { }
-                }
-           }
-       }
+        public static void Print(Member member)
+        {
+            var path = Path.GetTempPath();
+            var errorMessage = "";
+            PrintAsPdf(member, path, out errorMessage);
+            var filePath = GetPdfFileName(member, path);
+            using (var process = Process.Start(filePath)) { }
+        }
 
-        
+
         public static bool PrintAsPdf(Member member, string path, out string errorMessage)
         {
             errorMessage = "";
@@ -68,11 +62,11 @@ namespace EasyJudoClub.Utils
             }
         }
 
-private static string GetPdfFileName(Member member, string path)
-{
+        private static string GetPdfFileName(Member member, string path)
+        {
             var outputFileName = Path.Combine(path, member.Prenom + "_" + member.Nom + ".pdf");
-return outputFileName;
-}
+            return outputFileName;
+        }
 
         private static Bitmap GetMemberFormAsBitmap(Member member)
         {
