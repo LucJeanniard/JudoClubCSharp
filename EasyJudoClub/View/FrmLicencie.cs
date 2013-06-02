@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Linq;
 using EasyJudoClub.Model;
+using EasyJudoClub.Utils;
 
 namespace EasyJudoClub
 {
@@ -33,6 +34,7 @@ namespace EasyJudoClub
         {
             btn_OK.Visible = false;
             btn_Cancel.Visible = false;
+            btn_print.Visible = false;
         }
 
         private void UpdateForm()
@@ -250,6 +252,11 @@ namespace EasyJudoClub
         private void btn_Cancel_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
+        }
+
+        private void btn_print_Click(object sender, EventArgs e)
+        {
+            MemberPrinter.Print(Member);
         }
 
 
