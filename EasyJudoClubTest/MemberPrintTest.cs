@@ -14,30 +14,75 @@ namespace EasyJudoClubTest
     public class MemberPrintTest
     {
         [TestMethod]
-        public void TestMemberPrintAsPdf()
+        public void TestMemberPrintAsPdfForSuccess()
         {
             var member = new Member();
             member.Nom = "Jeanniard";
             member.Prenom = "Luc";
-            member.Ceinture = Ceinture.Blanche;
-
 
             var outPutPath = Path.GetTempPath();
             var expectedOutputFileName = Path.Combine(outPutPath, member.Prenom + member.Nom + ".pdf");
-            MemberPrinter.Print(member, outPutPath);
+            var errorMessage = "";
+            Assert.IsTrue(MemberPrinter.PrintAsPdf(member, outPutPath, out errorMessage));
             Assert.IsTrue(File.Exists(expectedOutputFileName));
-            Process.Start(expectedOutputFileName);
+            Assert.IsTrue(String.IsNullOrEmpty(errorMessage));
+            //Process.Start(expectedOutputFileName);
+            File.Delete(expectedOutputFileName);
+        }
+
+        [TestMethod]
+        public void TestMemberPrintAsPdfForFailureWhenPathDoesNotExists()
+        {
+            var member = new Member();
+
+            var outPutPath = @"X:\Temp\";
+            var expectedOutputFileName = Path.Combine(outPutPath, member.Prenom + member.Nom + ".pdf");
+            var errorMessage = "";
+            Assert.IsFalse(MemberPrinter.PrintAsPdf(member, outPutPath, out errorMessage));
+            Assert.IsFalse(String.IsNullOrEmpty(errorMessage));
         }
     }
 
     public class MemberPrinter
     {
-        public static void Print(Member member, string path)
+        public static bool PrintAsPdf(Member member, string path, out string errorMessage)
         {
+            errorMessage = "";
             var outputFileName = Path.Combine(path, member.Prenom + member.Nom + ".pdf");
-            if (File.Exists(outputFileName))
-                File.Delete(outputFileName);
 
+            using (var document = new PdfDocument())
+            {
+                PdfPage page = document.AddPage();
+                page.Orientation = PdfSharp.PageOrientation.Landscape;
+
+                using (var bitmap = GetMemberFormAsBitmap(member))
+                {
+                    using (var image = XImage.FromGdiPlusImage(bitmap as Image))
+                    {
+                        using (var graphic = XGraphics.FromPdfPage(page))
+                        {
+                            var x = 30;
+                            var y = 30;
+                            graphic.DrawImage(image, x, y);
+                        }
+                    }
+                }
+
+                try
+                {
+                    document.Save(outputFileName);
+                    return File.Exists(outputFileName);
+                }
+                catch (Exception e)
+                {
+                    errorMessage = e.Message;
+                    return false;
+                }
+            }
+        }
+
+        public static Bitmap GetMemberFormAsBitmap(Member member)
+        {
             using (var formMember = new FrmLicencie())
             {
                 formMember.Member = member;
@@ -47,28 +92,12 @@ namespace EasyJudoClubTest
                 formMember.HideButtons();
                 formMember.Show();
                 
-                using (var bitmap = new Bitmap(formMember.Width, formMember.Height))
-                {
-                    formMember.DrawToBitmap(bitmap, formMember.ClientRectangle);
-
-
-                    using (var document = new PdfDocument())
-                    {
-                        PdfPage page = document.AddPage();
-                        page.Orientation = PdfSharp.PageOrientation.Landscape;
-
-                        var graphic = XGraphics.FromPdfPage(page);
-                        using (var image = XImage.FromGdiPlusImage(bitmap as Image))
-                        {
-                            var x = 30;
-                            var y = 30;
-                            graphic.DrawImage(image, x, y);
-                            
-                        }
-                        document.Save(outputFileName);
-                    }
-                }
-            }
+                var bitmap = new Bitmap(formMember.Width, formMember.Height);
+                formMember.DrawToBitmap(bitmap, formMember.ClientRectangle);
+                return bitmap;
+             }
         }
     }
 }
+
+
