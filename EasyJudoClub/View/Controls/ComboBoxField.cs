@@ -49,6 +49,9 @@ namespace EasyJudoClub
             set { comboBox.Enabled = value; }
         }
 
-
+        public void ClearText()
+        {
+            comboBox.SelectedItem = null;
+        }
     }
 }

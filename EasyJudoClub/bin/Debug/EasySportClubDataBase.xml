@@ -273,6 +273,24 @@
     </Member>
     <Member>
       <saison2012_2013>false</saison2012_2013>
+      <Id>18</Id>
+      <DateEntreeClub>0001-01-01T00:00:00</DateEntreeClub>
+      <Nom>BLAIN</Nom>
+      <Prenom>SOLENE</Prenom>
+      <Commune>BIZONNES</Commune>
+      <CodePostal>38690</CodePostal>
+      <Email>blain.olivier@aliceadsl.fr</Email>
+      <Tel>04 74 88 94 77</Tel>
+      <TelPortable />
+      <DateDeNaissance>2003-04-21T00:00:00</DateDeNaissance>
+      <Sexe>Feminin</Sexe>
+      <LicenseNumber>F21042003BLAIN01</LicenseNumber>
+      <Ceinture>Blanche</Ceinture>
+      <CommisaireSportif>false</CommisaireSportif>
+      <Arbitre>false</Arbitre>
+    </Member>
+    <Member>
+      <saison2012_2013>false</saison2012_2013>
       <Id>16</Id>
       <DateEntreeClub>0001-01-01T00:00:00</DateEntreeClub>
       <Nom>BLAIN</Nom>
@@ -303,24 +321,6 @@
       <DateDeNaissance>2001-05-10T00:00:00</DateDeNaissance>
       <Sexe>Masculin</Sexe>
       <LicenseNumber>M10052001BLAIN01</LicenseNumber>
-      <Ceinture>Blanche</Ceinture>
-      <CommisaireSportif>false</CommisaireSportif>
-      <Arbitre>false</Arbitre>
-    </Member>
-    <Member>
-      <saison2012_2013>false</saison2012_2013>
-      <Id>18</Id>
-      <DateEntreeClub>0001-01-01T00:00:00</DateEntreeClub>
-      <Nom>BLAIN</Nom>
-      <Prenom>SOLENE</Prenom>
-      <Commune>BIZONNES</Commune>
-      <CodePostal>38690</CodePostal>
-      <Email>blain.olivier@aliceadsl.fr</Email>
-      <Tel>04 74 88 94 77</Tel>
-      <TelPortable />
-      <DateDeNaissance>2003-04-21T00:00:00</DateDeNaissance>
-      <Sexe>Feminin</Sexe>
-      <LicenseNumber>F21042003BLAIN01</LicenseNumber>
       <Ceinture>Blanche</Ceinture>
       <CommisaireSportif>false</CommisaireSportif>
       <Arbitre>false</Arbitre>

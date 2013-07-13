@@ -21,3 +21,4 @@ C:\CSharp\JudoClubCSharp\EasyJudoClub\bin\Debug\PdfSharp.Charting.xml
 C:\CSharp\JudoClubCSharp\EasyJudoClub\bin\Debug\de\PdfSharp.resources.dll
 C:\CSharp\JudoClubCSharp\EasyJudoClub\bin\Debug\de\PdfSharp.Charting.resources.dll
 C:\CSharp\JudoClubCSharp\EasyJudoClub\bin\Debug\EasyJudoClub.exe.config
+C:\CSharp\JudoClubCSharp\EasyJudoClub\obj\x86\Debug\EasyJudoClub.csprojResolveAssemblyReference.cache

@@ -30,11 +30,14 @@ namespace EasyJudoClub
             }
         }
 
-        public void HideButtons()
+        public void PrepareForPrinting()
         {
             btn_OK.Visible = false;
             btn_Cancel.Visible = false;
             btn_print.Visible = false;
+            tbf_Cotisation.Text = "";
+            cbf_categorie.ClearText();
+            cbf_Ceinture.ClearText();
         }
 
         private void UpdateForm()

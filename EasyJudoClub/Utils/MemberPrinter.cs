@@ -133,7 +133,7 @@ namespace EasyJudoClub.Utils
                 formMember.FormBorderStyle = FormBorderStyle.None;
                 formMember.Visible = false;
                 formMember.BackColor = Color.White;
-                formMember.HideButtons();
+                formMember.PrepareForPrinting();
                 formMember.Show();
 
                 var bitmap = new Bitmap(formMember.Width, formMember.Height);
