@@ -160,7 +160,7 @@ namespace EasyJudoClub
             UpdateForm();  //cotisation
         }
 
-        private void tbf_emailPere_Validated(object sender, EventArgs e)
+        private void tbf_EmailPere_Validated(object sender, EventArgs e)
         {
             Member.EmailPere = tbf_EmailPere.Text;
         }
@@ -175,7 +175,7 @@ namespace EasyJudoClub
             Member.TelPortablePere = tbf_TelPortablePere.Text;
         }
 
-        private void tbf_emailMere_Validated(object sender, EventArgs e)
+        private void tbf_EmailMere_Validated(object sender, EventArgs e)
         {
             Member.EmailMere = tbf_EmailMere.Text;
         }
@@ -189,7 +189,6 @@ namespace EasyJudoClub
         {
             Member.TelPortableMere = tbf_TelPortableMere.Text;
         }
-
 
         private void tbf_NomPere_Validated(object sender, EventArgs e)
         {

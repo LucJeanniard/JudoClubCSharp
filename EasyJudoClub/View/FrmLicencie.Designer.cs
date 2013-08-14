@@ -482,6 +482,7 @@
             this.tbf_TelFixePere.ReadOnly = false;
             this.tbf_TelFixePere.Size = new System.Drawing.Size(296, 27);
             this.tbf_TelFixePere.TabIndex = 12;
+            this.tbf_TelFixePere.Validated += new System.EventHandler(this.tbf_TelFixePere_Validated);
             // 
             // tbf_TelPortablePere
             // 
@@ -491,6 +492,7 @@
             this.tbf_TelPortablePere.ReadOnly = false;
             this.tbf_TelPortablePere.Size = new System.Drawing.Size(296, 27);
             this.tbf_TelPortablePere.TabIndex = 13;
+            this.tbf_TelPortablePere.Validated += new System.EventHandler(this.tbf_TelPortablePere_Validated);
             // 
             // tbf_EmailPere
             // 
@@ -500,6 +502,7 @@
             this.tbf_EmailPere.ReadOnly = false;
             this.tbf_EmailPere.Size = new System.Drawing.Size(296, 27);
             this.tbf_EmailPere.TabIndex = 11;
+            this.tbf_EmailPere.Validated += new System.EventHandler(this.tbf_EmailPere_Validated);
             // 
             // tbf_PrenomPere
             // 
@@ -509,6 +512,7 @@
             this.tbf_PrenomPere.ReadOnly = false;
             this.tbf_PrenomPere.Size = new System.Drawing.Size(296, 27);
             this.tbf_PrenomPere.TabIndex = 10;
+            this.tbf_PrenomPere.Validated += new System.EventHandler(this.tbf_PrenomPere_Validated);
             // 
             // tbf_NomPere
             // 
@@ -518,6 +522,7 @@
             this.tbf_NomPere.ReadOnly = false;
             this.tbf_NomPere.Size = new System.Drawing.Size(296, 27);
             this.tbf_NomPere.TabIndex = 9;
+            this.tbf_NomPere.Validated += new System.EventHandler(this.tbf_NomPere_Validated);
             // 
             // tbf_TelFixeMere
             // 
@@ -527,6 +532,8 @@
             this.tbf_TelFixeMere.ReadOnly = false;
             this.tbf_TelFixeMere.Size = new System.Drawing.Size(296, 27);
             this.tbf_TelFixeMere.TabIndex = 15;
+            this.tbf_TelFixeMere.Validated += new System.EventHandler(this.tbf_TelFixeMere_Validated);
+ 
             // 
             // tbf_TelPortableMere
             // 
@@ -536,6 +543,7 @@
             this.tbf_TelPortableMere.ReadOnly = false;
             this.tbf_TelPortableMere.Size = new System.Drawing.Size(296, 27);
             this.tbf_TelPortableMere.TabIndex = 16;
+            this.tbf_TelPortableMere.Validated += new System.EventHandler(this.tbf_TelPortableMere_Validated);
             // 
             // tbf_EmailMere
             // 
@@ -545,6 +553,7 @@
             this.tbf_EmailMere.ReadOnly = false;
             this.tbf_EmailMere.Size = new System.Drawing.Size(296, 27);
             this.tbf_EmailMere.TabIndex = 14;
+            this.tbf_EmailMere.Validated += new System.EventHandler(this.tbf_EmailMere_Validated);
             // 
             // FrmLicencie
             // 
