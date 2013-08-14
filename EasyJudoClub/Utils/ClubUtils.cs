@@ -35,9 +35,9 @@ namespace EasyJudoClub
                     Debug.Assert(false, "sexe not found for " + newMember.Nom);
 
                 newMember.LicenseNumber = memberFields[6];
-                newMember.Email = memberFields[7];
-                newMember.Tel = memberFields[8];
-                newMember.TelPortable = memberFields[9];
+                newMember.EmailMere = memberFields[7];
+                newMember.TelMere = memberFields[8];
+                newMember.TelPortableMere = memberFields[9];
 
                 listMember.Add(newMember);
             }

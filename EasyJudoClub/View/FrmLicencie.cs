@@ -57,9 +57,13 @@ namespace EasyJudoClub
             tbf_NomMere.Text = _member.NomMere;
             tbf_PrenomMere.Text = _member.PrenomMere;
             
-            tbf_TelFixe.Text = _member.Tel;
-            tbf_TelPortable.Text = _member.TelPortable;
-            tbf_Email.Text = _member.Email;
+            tbf_TelFixePere.Text = _member.TelPere;
+            tbf_TelPortablePere.Text = _member.TelPortablePere;
+            tbf_EmailPere.Text = _member.EmailPere;
+
+            tbf_TelFixeMere.Text = _member.TelMere;
+            tbf_TelPortableMere.Text = _member.TelPortableMere;
+            tbf_EmailMere.Text = _member.EmailMere;
 
             tbf_LicenceNumber.Text = _member.LicenseNumber;
             tbf_Age.Text = _member.Age.ToString();
@@ -156,20 +160,36 @@ namespace EasyJudoClub
             UpdateForm();  //cotisation
         }
 
-        private void tbf_email_Validated(object sender, EventArgs e)
+        private void tbf_emailPere_Validated(object sender, EventArgs e)
         {
-            Member.Email = tbf_Email.Text;
+            Member.EmailPere = tbf_EmailPere.Text;
         }
 
-        private void tbf_TelFixe_Validated(object sender, EventArgs e)
+        private void tbf_TelFixePere_Validated(object sender, EventArgs e)
         {
-            Member.Tel = tbf_TelFixe.Text;
+            Member.TelPere = tbf_TelFixePere.Text;
         }
 
-        private void tbf_TelPortable_Validated(object sender, EventArgs e)
+        private void tbf_TelPortablePere_Validated(object sender, EventArgs e)
         {
-            Member.TelPortable = tbf_TelPortable.Text;
+            Member.TelPortablePere = tbf_TelPortablePere.Text;
         }
+
+        private void tbf_emailMere_Validated(object sender, EventArgs e)
+        {
+            Member.EmailMere = tbf_EmailMere.Text;
+        }
+
+        private void tbf_TelFixeMere_Validated(object sender, EventArgs e)
+        {
+            Member.TelMere = tbf_TelFixeMere.Text;
+        }
+
+        private void tbf_TelPortableMere_Validated(object sender, EventArgs e)
+        {
+            Member.TelPortableMere = tbf_TelPortableMere.Text;
+        }
+
 
         private void tbf_NomPere_Validated(object sender, EventArgs e)
         {

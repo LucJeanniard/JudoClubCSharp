@@ -20,9 +20,12 @@ namespace EasyJudoClub
         public string Commune { get; set; }
         public string CodePostal { get; set; }
         public string Adresse { get; set; }
-        public string Email { get; set; }
-        public string Tel { get; set; }
-        public string TelPortable { get; set; }
+        public string EmailMere { get; set; }
+        public string TelMere { get; set; }
+        public string TelPortableMere { get; set; }
+        public string EmailPere { get; set; }
+        public string TelPere { get; set; }
+        public string TelPortablePere { get; set; }
 
         public DateTime DateDeNaissance { get; set; }
         public Sexe Sexe { get; set; }

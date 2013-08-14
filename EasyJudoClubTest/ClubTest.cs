@@ -65,7 +65,10 @@ namespace EasyJudoClubTest
             Assert.AreEqual(false, defaultMember.CommisaireSportif);
             Assert.AreEqual("", defaultMember.Commune);
             Assert.AreEqual(false, defaultMember.CotisationAJour);
-            Assert.AreEqual("", defaultMember.Email);
+            Assert.AreEqual("", defaultMember.EmailPere);
+            Assert.AreEqual("", defaultMember.EmailMere);
+            Assert.AreEqual("", defaultMember.TelPere);
+            Assert.AreEqual("", defaultMember.TelMere);
             Assert.AreEqual("", defaultMember.LicenseNumber);
             Assert.AreEqual("", defaultMember.MoyenPaiementsCarteMRA);
             Assert.AreEqual("", defaultMember.MoyenPaiementsCheque);
@@ -124,12 +127,12 @@ namespace EasyJudoClubTest
             Assert.AreEqual(1, defaultMember.Id);
 
             var secondMember = _club.Members[1];
-            secondMember.Email = "luc.jeanniard@gmail.com";
+            secondMember.EmailPere = "luc.jeanniard@gmail.com";
 
             _club.UpdateMember(defaultMember, secondMember);
 
             Assert.AreEqual(3, _club.MemberCount);
-            Assert.AreEqual("luc.jeanniard@gmail.com", _club.Members[1].Email);
+            Assert.AreEqual("luc.jeanniard@gmail.com", _club.Members[1].EmailPere);
             Assert.AreEqual(1, _club.Members[1].Id);
         }
     }
