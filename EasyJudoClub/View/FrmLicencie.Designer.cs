@@ -44,6 +44,9 @@
             this.tbf_CodePostal = new EasyJudoClub.TextBoxField();
             this.tbf_Adresse = new EasyJudoClub.TextBoxField();
             this.gb_mère = new System.Windows.Forms.GroupBox();
+            this.tbf_TelFixeMere = new EasyJudoClub.TextBoxField();
+            this.tbf_TelPortableMere = new EasyJudoClub.TextBoxField();
+            this.tbf_EmailMere = new EasyJudoClub.TextBoxField();
             this.tbf_PrenomMere = new EasyJudoClub.TextBoxField();
             this.tbf_NomMere = new EasyJudoClub.TextBoxField();
             this.gb_divers = new System.Windows.Forms.GroupBox();
@@ -70,9 +73,6 @@
             this.tbf_EmailPere = new EasyJudoClub.TextBoxField();
             this.tbf_PrenomPere = new EasyJudoClub.TextBoxField();
             this.tbf_NomPere = new EasyJudoClub.TextBoxField();
-            this.tbf_TelFixeMere = new EasyJudoClub.TextBoxField();
-            this.tbf_TelPortableMere = new EasyJudoClub.TextBoxField();
-            this.tbf_EmailMere = new EasyJudoClub.TextBoxField();
             this.gb_identite.SuspendLayout();
             this.gb_adresse.SuspendLayout();
             this.gb_mère.SuspendLayout();
@@ -194,7 +194,7 @@
             this.gb_adresse.Location = new System.Drawing.Point(12, 407);
             this.gb_adresse.Name = "gb_adresse";
             this.gb_adresse.Size = new System.Drawing.Size(306, 241);
-            this.gb_adresse.TabIndex = 2;
+            this.gb_adresse.TabIndex = 3;
             this.gb_adresse.TabStop = false;
             this.gb_adresse.Text = "Adresse";
             // 
@@ -252,6 +252,36 @@
             this.gb_mère.TabStop = false;
             this.gb_mère.Text = "Mère";
             // 
+            // tbf_TelFixeMere
+            // 
+            this.tbf_TelFixeMere.Label = "Tel fixe";
+            this.tbf_TelFixeMere.Location = new System.Drawing.Point(6, 121);
+            this.tbf_TelFixeMere.Name = "tbf_TelFixeMere";
+            this.tbf_TelFixeMere.ReadOnly = false;
+            this.tbf_TelFixeMere.Size = new System.Drawing.Size(296, 27);
+            this.tbf_TelFixeMere.TabIndex = 3;
+            this.tbf_TelFixeMere.Validated += new System.EventHandler(this.tbf_TelFixeMere_Validated);
+            // 
+            // tbf_TelPortableMere
+            // 
+            this.tbf_TelPortableMere.Label = "Tel portable";
+            this.tbf_TelPortableMere.Location = new System.Drawing.Point(6, 154);
+            this.tbf_TelPortableMere.Name = "tbf_TelPortableMere";
+            this.tbf_TelPortableMere.ReadOnly = false;
+            this.tbf_TelPortableMere.Size = new System.Drawing.Size(296, 27);
+            this.tbf_TelPortableMere.TabIndex = 4;
+            this.tbf_TelPortableMere.Validated += new System.EventHandler(this.tbf_TelPortableMere_Validated);
+            // 
+            // tbf_EmailMere
+            // 
+            this.tbf_EmailMere.Label = "Email";
+            this.tbf_EmailMere.Location = new System.Drawing.Point(6, 88);
+            this.tbf_EmailMere.Name = "tbf_EmailMere";
+            this.tbf_EmailMere.ReadOnly = false;
+            this.tbf_EmailMere.Size = new System.Drawing.Size(296, 27);
+            this.tbf_EmailMere.TabIndex = 2;
+            this.tbf_EmailMere.Validated += new System.EventHandler(this.tbf_EmailMere_Validated);
+            // 
             // tbf_PrenomMere
             // 
             this.tbf_PrenomMere.Label = "Prénom Mère";
@@ -259,7 +289,7 @@
             this.tbf_PrenomMere.Name = "tbf_PrenomMere";
             this.tbf_PrenomMere.ReadOnly = false;
             this.tbf_PrenomMere.Size = new System.Drawing.Size(296, 27);
-            this.tbf_PrenomMere.TabIndex = 3;
+            this.tbf_PrenomMere.TabIndex = 1;
             this.tbf_PrenomMere.Validated += new System.EventHandler(this.tbf_PrenomMere_Validated);
             // 
             // tbf_NomMere
@@ -269,7 +299,7 @@
             this.tbf_NomMere.Name = "tbf_NomMere";
             this.tbf_NomMere.ReadOnly = false;
             this.tbf_NomMere.Size = new System.Drawing.Size(296, 27);
-            this.tbf_NomMere.TabIndex = 2;
+            this.tbf_NomMere.TabIndex = 0;
             this.tbf_NomMere.Validated += new System.EventHandler(this.tbf_NomMere_Validated);
             // 
             // gb_divers
@@ -280,7 +310,7 @@
             this.gb_divers.Location = new System.Drawing.Point(647, 12);
             this.gb_divers.Name = "gb_divers";
             this.gb_divers.Size = new System.Drawing.Size(331, 97);
-            this.gb_divers.TabIndex = 4;
+            this.gb_divers.TabIndex = 5;
             this.gb_divers.TabStop = false;
             this.gb_divers.Text = "Divers";
             // 
@@ -325,7 +355,7 @@
             this.gb_reglement.Location = new System.Drawing.Point(330, 407);
             this.gb_reglement.Name = "gb_reglement";
             this.gb_reglement.Size = new System.Drawing.Size(311, 241);
-            this.gb_reglement.TabIndex = 3;
+            this.gb_reglement.TabIndex = 4;
             this.gb_reglement.TabStop = false;
             this.gb_reglement.Text = "Règlement";
             // 
@@ -336,7 +366,7 @@
             this.tbf_CarteMRA.Name = "tbf_CarteMRA";
             this.tbf_CarteMRA.ReadOnly = false;
             this.tbf_CarteMRA.Size = new System.Drawing.Size(287, 28);
-            this.tbf_CarteMRA.TabIndex = 13;
+            this.tbf_CarteMRA.TabIndex = 5;
             this.tbf_CarteMRA.Validated += new System.EventHandler(this.tbf_CarteMRA_Validated);
             // 
             // tbf_ChequeVacances
@@ -346,7 +376,7 @@
             this.tbf_ChequeVacances.Name = "tbf_ChequeVacances";
             this.tbf_ChequeVacances.ReadOnly = false;
             this.tbf_ChequeVacances.Size = new System.Drawing.Size(287, 28);
-            this.tbf_ChequeVacances.TabIndex = 11;
+            this.tbf_ChequeVacances.TabIndex = 3;
             this.tbf_ChequeVacances.Validated += new System.EventHandler(this.tbf_ChequeVacances_Validated);
             // 
             // tbf_Liquide
@@ -356,7 +386,7 @@
             this.tbf_Liquide.Name = "tbf_Liquide";
             this.tbf_Liquide.ReadOnly = false;
             this.tbf_Liquide.Size = new System.Drawing.Size(287, 28);
-            this.tbf_Liquide.TabIndex = 10;
+            this.tbf_Liquide.TabIndex = 2;
             this.tbf_Liquide.Validated += new System.EventHandler(this.tbf_Liquide_Validated);
             // 
             // tbf_ChequierJeune
@@ -366,7 +396,7 @@
             this.tbf_ChequierJeune.Name = "tbf_ChequierJeune";
             this.tbf_ChequierJeune.ReadOnly = false;
             this.tbf_ChequierJeune.Size = new System.Drawing.Size(287, 28);
-            this.tbf_ChequierJeune.TabIndex = 12;
+            this.tbf_ChequierJeune.TabIndex = 4;
             this.tbf_ChequierJeune.Validated += new System.EventHandler(this.tbf_ChequeJeune_Validated);
             // 
             // tbf_Cheque
@@ -376,7 +406,7 @@
             this.tbf_Cheque.Name = "tbf_Cheque";
             this.tbf_Cheque.ReadOnly = false;
             this.tbf_Cheque.Size = new System.Drawing.Size(287, 28);
-            this.tbf_Cheque.TabIndex = 9;
+            this.tbf_Cheque.TabIndex = 1;
             this.tbf_Cheque.Validated += new System.EventHandler(this.tbf_Cheque_Validated);
             // 
             // tbf_Cotisation
@@ -386,7 +416,7 @@
             this.tbf_Cotisation.Name = "tbf_Cotisation";
             this.tbf_Cotisation.ReadOnly = true;
             this.tbf_Cotisation.Size = new System.Drawing.Size(287, 27);
-            this.tbf_Cotisation.TabIndex = 8;
+            this.tbf_Cotisation.TabIndex = 0;
             // 
             // groupBox1
             // 
@@ -395,7 +425,7 @@
             this.groupBox1.Location = new System.Drawing.Point(647, 117);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(331, 93);
-            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Certificat médical";
             // 
@@ -425,7 +455,7 @@
             this.btn_OK.Location = new System.Drawing.Point(664, 534);
             this.btn_OK.Name = "btn_OK";
             this.btn_OK.Size = new System.Drawing.Size(97, 32);
-            this.btn_OK.TabIndex = 6;
+            this.btn_OK.TabIndex = 7;
             this.btn_OK.Text = "Enregister";
             this.btn_OK.UseVisualStyleBackColor = true;
             this.btn_OK.Click += new System.EventHandler(this.btn_OK_Click);
@@ -436,7 +466,7 @@
             this.btn_Cancel.Location = new System.Drawing.Point(774, 534);
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.Size = new System.Drawing.Size(96, 32);
-            this.btn_Cancel.TabIndex = 7;
+            this.btn_Cancel.TabIndex = 8;
             this.btn_Cancel.Text = "Quitter";
             this.btn_Cancel.UseVisualStyleBackColor = true;
             this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
@@ -455,7 +485,7 @@
             this.btn_print.Location = new System.Drawing.Point(881, 534);
             this.btn_print.Name = "btn_print";
             this.btn_print.Size = new System.Drawing.Size(97, 32);
-            this.btn_print.TabIndex = 7;
+            this.btn_print.TabIndex = 9;
             this.btn_print.Text = "Imprimer";
             this.btn_print.UseVisualStyleBackColor = true;
             this.btn_print.Click += new System.EventHandler(this.btn_print_Click);
@@ -470,7 +500,7 @@
             this.gb_père.Location = new System.Drawing.Point(330, 192);
             this.gb_père.Name = "gb_père";
             this.gb_père.Size = new System.Drawing.Size(311, 199);
-            this.gb_père.TabIndex = 9;
+            this.gb_père.TabIndex = 2;
             this.gb_père.TabStop = false;
             this.gb_père.Text = "Père";
             // 
@@ -481,7 +511,7 @@
             this.tbf_TelFixePere.Name = "tbf_TelFixePere";
             this.tbf_TelFixePere.ReadOnly = false;
             this.tbf_TelFixePere.Size = new System.Drawing.Size(296, 27);
-            this.tbf_TelFixePere.TabIndex = 12;
+            this.tbf_TelFixePere.TabIndex = 3;
             this.tbf_TelFixePere.Validated += new System.EventHandler(this.tbf_TelFixePere_Validated);
             // 
             // tbf_TelPortablePere
@@ -491,7 +521,7 @@
             this.tbf_TelPortablePere.Name = "tbf_TelPortablePere";
             this.tbf_TelPortablePere.ReadOnly = false;
             this.tbf_TelPortablePere.Size = new System.Drawing.Size(296, 27);
-            this.tbf_TelPortablePere.TabIndex = 13;
+            this.tbf_TelPortablePere.TabIndex = 4;
             this.tbf_TelPortablePere.Validated += new System.EventHandler(this.tbf_TelPortablePere_Validated);
             // 
             // tbf_EmailPere
@@ -501,7 +531,7 @@
             this.tbf_EmailPere.Name = "tbf_EmailPere";
             this.tbf_EmailPere.ReadOnly = false;
             this.tbf_EmailPere.Size = new System.Drawing.Size(296, 27);
-            this.tbf_EmailPere.TabIndex = 11;
+            this.tbf_EmailPere.TabIndex = 2;
             this.tbf_EmailPere.Validated += new System.EventHandler(this.tbf_EmailPere_Validated);
             // 
             // tbf_PrenomPere
@@ -511,7 +541,7 @@
             this.tbf_PrenomPere.Name = "tbf_PrenomPere";
             this.tbf_PrenomPere.ReadOnly = false;
             this.tbf_PrenomPere.Size = new System.Drawing.Size(296, 27);
-            this.tbf_PrenomPere.TabIndex = 10;
+            this.tbf_PrenomPere.TabIndex = 1;
             this.tbf_PrenomPere.Validated += new System.EventHandler(this.tbf_PrenomPere_Validated);
             // 
             // tbf_NomPere
@@ -521,39 +551,8 @@
             this.tbf_NomPere.Name = "tbf_NomPere";
             this.tbf_NomPere.ReadOnly = false;
             this.tbf_NomPere.Size = new System.Drawing.Size(296, 27);
-            this.tbf_NomPere.TabIndex = 9;
+            this.tbf_NomPere.TabIndex = 0;
             this.tbf_NomPere.Validated += new System.EventHandler(this.tbf_NomPere_Validated);
-            // 
-            // tbf_TelFixeMere
-            // 
-            this.tbf_TelFixeMere.Label = "Tel fixe";
-            this.tbf_TelFixeMere.Location = new System.Drawing.Point(6, 121);
-            this.tbf_TelFixeMere.Name = "tbf_TelFixeMere";
-            this.tbf_TelFixeMere.ReadOnly = false;
-            this.tbf_TelFixeMere.Size = new System.Drawing.Size(296, 27);
-            this.tbf_TelFixeMere.TabIndex = 15;
-            this.tbf_TelFixeMere.Validated += new System.EventHandler(this.tbf_TelFixeMere_Validated);
- 
-            // 
-            // tbf_TelPortableMere
-            // 
-            this.tbf_TelPortableMere.Label = "Tel portable";
-            this.tbf_TelPortableMere.Location = new System.Drawing.Point(6, 154);
-            this.tbf_TelPortableMere.Name = "tbf_TelPortableMere";
-            this.tbf_TelPortableMere.ReadOnly = false;
-            this.tbf_TelPortableMere.Size = new System.Drawing.Size(296, 27);
-            this.tbf_TelPortableMere.TabIndex = 16;
-            this.tbf_TelPortableMere.Validated += new System.EventHandler(this.tbf_TelPortableMere_Validated);
-            // 
-            // tbf_EmailMere
-            // 
-            this.tbf_EmailMere.Label = "Email";
-            this.tbf_EmailMere.Location = new System.Drawing.Point(6, 88);
-            this.tbf_EmailMere.Name = "tbf_EmailMere";
-            this.tbf_EmailMere.ReadOnly = false;
-            this.tbf_EmailMere.Size = new System.Drawing.Size(296, 27);
-            this.tbf_EmailMere.TabIndex = 14;
-            this.tbf_EmailMere.Validated += new System.EventHandler(this.tbf_EmailMere_Validated);
             // 
             // FrmLicencie
             // 
