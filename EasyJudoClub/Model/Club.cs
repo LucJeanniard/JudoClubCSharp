@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 using Be.Timvw.Framework.ComponentModel;
 
 namespace EasyJudoClub.Model
@@ -10,7 +11,7 @@ namespace EasyJudoClub.Model
     public class Club : IClub
     {
         public const string EASY_SPORT_CLUB_DB_FILE_NAME = @".\EasySportClubDataBase.xml";
-        
+
         public SortableBindingList<Member> Members { get; set; }
 
         [XmlIgnore]
@@ -28,7 +29,7 @@ namespace EasyJudoClub.Model
         public Member AddMember()
         {
             var newMemberId = 0;
-            if(Members.Count > 0)
+            if (Members.Count > 0)
                 newMemberId = Members.Max(_ => _.Id) + 1;
 
             var newMember = getDefaultMember();
@@ -75,7 +76,7 @@ namespace EasyJudoClub.Model
             bool result;
 
             var currentDateTime = DateTime.Now;
-            var backupFileName = 
+            var backupFileName =
                 String.Format(Path.GetFileNameWithoutExtension(EASY_SPORT_CLUB_DB_FILE_NAME) + "_{0}_{1}_{2}_{3}h{4}min{5}s.xml",
                               currentDateTime.Day,
                               currentDateTime.Month,
@@ -138,5 +139,23 @@ namespace EasyJudoClub.Model
             return newMember;
         }
 
+
+        public Dictionary<string, string> getDoctors()
+        {
+            var doctors = new Dictionary<string, string>();
+
+            
+            foreach(var member in this.Members)
+            {
+                var medecin = member.CertificatMedicalNomMedecin;
+                var tel = member.CertificatMedicalTelMedecin;
+                if(!doctors.Keys.Contains(medecin) && !String.IsNullOrEmpty(medecin))
+                {
+                    doctors.Add(medecin, tel);
+                }
+            }
+
+            return doctors;
+        }
     }
 }

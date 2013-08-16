@@ -4,6 +4,7 @@ using System;
 using EasyJudoClub;
 using Be.Timvw.Framework.ComponentModel;
 using System.IO;
+using System.Collections.Generic;
 
 namespace EasyJudoClubTest
 {
@@ -134,6 +135,33 @@ namespace EasyJudoClubTest
             Assert.AreEqual(3, _club.MemberCount);
             Assert.AreEqual("luc.jeanniard@gmail.com", _club.Members[1].EmailPere);
             Assert.AreEqual(1, _club.Members[1].Id);
+        }
+
+        [TestMethod()]
+        public void GetAllDoctorsAndTelephones()
+        {
+            var members = new SortableBindingList<Member>();
+            var newMember1 = _club.AddMember();
+            newMember1.CertificatMedicalNomMedecin="medecin1";
+            newMember1.CertificatMedicalTelMedecin = "11111111";
+            var newMember2 = _club.AddMember();
+            newMember2.CertificatMedicalNomMedecin = "medecin2";
+            newMember2.CertificatMedicalTelMedecin = "22222222";
+
+            var newMember2bis = _club.AddMember();
+            newMember2bis.CertificatMedicalNomMedecin = "medecin2";
+            newMember2bis.CertificatMedicalTelMedecin = "22222222";
+
+            var newMemberEmptyDoc = _club.AddMember();
+            newMemberEmptyDoc.CertificatMedicalNomMedecin = "";
+            newMemberEmptyDoc.CertificatMedicalTelMedecin = "";
+            
+            var doctors = _club.getDoctors();
+            Assert.AreEqual(2, doctors.Keys.Count);
+            Assert.IsTrue(doctors.ContainsKey("medecin1"));
+            Assert.IsTrue(doctors.ContainsKey("medecin2"));
+            Assert.AreEqual("11111111", doctors["medecin1"]);
+            Assert.AreEqual("22222222", doctors["medecin2"]);
         }
     }
 
