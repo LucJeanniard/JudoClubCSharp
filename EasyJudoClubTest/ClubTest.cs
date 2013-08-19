@@ -156,7 +156,7 @@ namespace EasyJudoClubTest
             newMemberEmptyDoc.CertificatMedicalNomMedecin = "";
             newMemberEmptyDoc.CertificatMedicalTelMedecin = "";
             
-            var doctors = _club.getDoctors();
+            var doctors = _club.GetDoctorsAndTel();
             Assert.AreEqual(2, doctors.Keys.Count);
             Assert.IsTrue(doctors.ContainsKey("medecin1"));
             Assert.IsTrue(doctors.ContainsKey("medecin2"));

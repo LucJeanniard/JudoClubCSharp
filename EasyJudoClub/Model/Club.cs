@@ -140,7 +140,7 @@ namespace EasyJudoClub.Model
         }
 
 
-        public Dictionary<string, string> getDoctors()
+        public Dictionary<string, string> GetDoctorsAndTel()
         {
             var doctors = new Dictionary<string, string>();
 
@@ -149,7 +149,7 @@ namespace EasyJudoClub.Model
             {
                 var medecin = member.CertificatMedicalNomMedecin;
                 var tel = member.CertificatMedicalTelMedecin;
-                if(!doctors.Keys.Contains(medecin) && !String.IsNullOrEmpty(medecin))
+                if(!String.IsNullOrEmpty(medecin) && !doctors.Keys.Contains(medecin))
                 {
                     doctors.Add(medecin, tel);
                 }

@@ -61,8 +61,8 @@
             this.tbf_Cheque = new EasyJudoClub.TextBoxField();
             this.tbf_Cotisation = new EasyJudoClub.TextBoxField();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbb_medecin = new System.Windows.Forms.ComboBox();
             this.tbf_TelMedecin = new EasyJudoClub.TextBoxField();
-            this.tbf_NomMedecin = new EasyJudoClub.TextBoxField();
             this.btn_OK = new System.Windows.Forms.Button();
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -73,6 +73,7 @@
             this.tbf_EmailPere = new EasyJudoClub.TextBoxField();
             this.tbf_PrenomPere = new EasyJudoClub.TextBoxField();
             this.tbf_NomPere = new EasyJudoClub.TextBoxField();
+            this.label1 = new System.Windows.Forms.Label();
             this.gb_identite.SuspendLayout();
             this.gb_adresse.SuspendLayout();
             this.gb_mère.SuspendLayout();
@@ -420,8 +421,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.cbb_medecin);
             this.groupBox1.Controls.Add(this.tbf_TelMedecin);
-            this.groupBox1.Controls.Add(this.tbf_NomMedecin);
             this.groupBox1.Location = new System.Drawing.Point(647, 117);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(331, 93);
@@ -429,25 +431,26 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Certificat médical";
             // 
+            // cbb_medecin
+            // 
+            this.cbb_medecin.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbb_medecin.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbb_medecin.FormattingEnabled = true;
+            this.cbb_medecin.Location = new System.Drawing.Point(81, 22);
+            this.cbb_medecin.Name = "cbb_medecin";
+            this.cbb_medecin.Size = new System.Drawing.Size(229, 21);
+            this.cbb_medecin.TabIndex = 3;
+            this.cbb_medecin.Validated += new System.EventHandler(this.cbb_medecin_Validated);
+            // 
             // tbf_TelMedecin
             // 
             this.tbf_TelMedecin.Label = "Tel";
-            this.tbf_TelMedecin.Location = new System.Drawing.Point(6, 55);
+            this.tbf_TelMedecin.Location = new System.Drawing.Point(9, 49);
             this.tbf_TelMedecin.Name = "tbf_TelMedecin";
             this.tbf_TelMedecin.ReadOnly = false;
-            this.tbf_TelMedecin.Size = new System.Drawing.Size(285, 27);
+            this.tbf_TelMedecin.Size = new System.Drawing.Size(301, 27);
             this.tbf_TelMedecin.TabIndex = 1;
             this.tbf_TelMedecin.Validated += new System.EventHandler(this.tbf_TelMedecin_Validated);
-            // 
-            // tbf_NomMedecin
-            // 
-            this.tbf_NomMedecin.Label = "Nom";
-            this.tbf_NomMedecin.Location = new System.Drawing.Point(6, 22);
-            this.tbf_NomMedecin.Name = "tbf_NomMedecin";
-            this.tbf_NomMedecin.ReadOnly = false;
-            this.tbf_NomMedecin.Size = new System.Drawing.Size(285, 27);
-            this.tbf_NomMedecin.TabIndex = 0;
-            this.tbf_NomMedecin.Validated += new System.EventHandler(this.tbf_NomMedecin_Validated);
             // 
             // btn_OK
             // 
@@ -554,6 +557,15 @@
             this.tbf_NomPere.TabIndex = 0;
             this.tbf_NomPere.Validated += new System.EventHandler(this.tbf_NomPere_Validated);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(29, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Nom";
+            // 
             // FrmLicencie
             // 
             this.AcceptButton = this.btn_OK;
@@ -584,6 +596,7 @@
             this.gb_divers.ResumeLayout(false);
             this.gb_reglement.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gb_père.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -614,7 +627,6 @@
         private System.Windows.Forms.GroupBox gb_reglement;
         private System.Windows.Forms.GroupBox groupBox1;
         private TextBoxField tbf_TelMedecin;
-        private TextBoxField tbf_NomMedecin;
         private System.Windows.Forms.Button btn_OK;
         private System.Windows.Forms.Button btn_Cancel;
         private TextBoxField tbf_Cotisation;
@@ -636,5 +648,7 @@
         private TextBoxField tbf_TelFixeMere;
         private TextBoxField tbf_TelPortableMere;
         private TextBoxField tbf_EmailMere;
+        private System.Windows.Forms.ComboBox cbb_medecin;
+        private System.Windows.Forms.Label label1;
     }
 }

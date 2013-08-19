@@ -1,5 +1,6 @@
 ﻿using System;
 using Be.Timvw.Framework.ComponentModel;
+using System.Collections.Generic;
 namespace EasyJudoClub.Model
 {
     public interface IClub
@@ -11,5 +12,7 @@ namespace EasyJudoClub.Model
         void RemoveMember(int memberId);
 
         void UpdateMember(Member oldMember, Member newMember);
+
+        Dictionary<string, string> GetDoctorsAndTel();
     }
 }

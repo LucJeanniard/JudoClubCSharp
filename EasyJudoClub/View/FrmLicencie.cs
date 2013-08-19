@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using System.Linq;
 using EasyJudoClub.Model;
 using EasyJudoClub.Utils;
+using System.Collections.Generic;
 
 namespace EasyJudoClub
 {
@@ -28,6 +29,12 @@ namespace EasyJudoClub
                 _member = ObjectCopier.Clone<Member>(memberOriginal);
                 UpdateForm();
             }
+        }
+
+        public Dictionary<string, string> DoctorsAndTel
+        {
+            get;
+            set;
         }
 
         public void PrepareForPrinting()
@@ -77,8 +84,11 @@ namespace EasyJudoClub
             cbf_CommissaireSportif.Value = _member.CommisaireSportif;
             cbf_Arbitre.Value = _member.Arbitre;
 
-            tbf_NomMedecin.Text = _member.CertificatMedicalNomMedecin;
             tbf_TelMedecin.Text = _member.CertificatMedicalTelMedecin;
+            cbb_medecin.Text = _member.CertificatMedicalNomMedecin;
+            cbb_medecin.Items.Clear();
+            cbb_medecin.Items.AddRange(DoctorsAndTel.Keys.ToArray<string>());
+            cbb_medecin.SelectedItem = _member.CertificatMedicalNomMedecin;
 
             tbf_Cotisation.Text = _member.CoutCotisation.ToString();
             tbf_Liquide.Text = _member.MoyenPaiementsLiquide;
@@ -160,6 +170,22 @@ namespace EasyJudoClub
             UpdateForm();  //cotisation
         }
 
+        private void cbb_medecin_Validated(object sender, EventArgs e)
+        {
+            if ((cbb_medecin.SelectedItem != null) && !String.IsNullOrEmpty(cbb_medecin.SelectedItem.ToString()))
+            {
+                Member.CertificatMedicalNomMedecin = cbb_medecin.SelectedItem.ToString();
+                Member.CertificatMedicalTelMedecin= this.DoctorsAndTel[Member.CertificatMedicalNomMedecin];
+            }
+            else
+            {
+                Member.CertificatMedicalNomMedecin = cbb_medecin.Text;
+                Member.CertificatMedicalTelMedecin = "";
+            }
+
+            UpdateForm();  //cotisation
+        }
+
         private void tbf_EmailPere_Validated(object sender, EventArgs e)
         {
             Member.EmailPere = tbf_EmailPere.Text;
@@ -225,11 +251,6 @@ namespace EasyJudoClub
             Member.DateEntreeClub = df_DateEntreeClub.Date;
         }
 
-        private void tbf_NomMedecin_Validated(object sender, EventArgs e)
-        {
-            Member.CertificatMedicalNomMedecin = tbf_NomMedecin.Text;
-        }
-
         private void tbf_TelMedecin_Validated(object sender, EventArgs e)
         {
             Member.CertificatMedicalTelMedecin = tbf_TelMedecin.Text;
@@ -281,6 +302,6 @@ namespace EasyJudoClub
             MemberPrinter.Print(Member);
         }
 
-
+        
     }
 }

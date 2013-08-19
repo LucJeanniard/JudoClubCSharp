@@ -66,5 +66,10 @@ namespace EasyJudoClub.Controler
         {
             return memberList.Where(_ => _.saison2012_2013 == true).ToList();
         }
+
+        public Dictionary<string, string> GetDoctorsAndTel()
+        {
+            return this.JudoClub.GetDoctorsAndTel();
+        }
     }
 }

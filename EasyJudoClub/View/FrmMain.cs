@@ -101,8 +101,9 @@ namespace EasyJudoClub
         {
             using (var formulaire = new FrmLicencie())
             {
+                formulaire.DoctorsAndTel = this._easyJudoClubControler.GetDoctorsAndTel();
                 formulaire.Member = member;
-
+               
                 if (formulaire.ShowDialog() == DialogResult.OK)
                 {
                     var sortedColumn = dataGridMembers.SortedColumn;
