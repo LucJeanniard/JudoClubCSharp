@@ -51,9 +51,12 @@ namespace EasyJudoClub
             communeDataGridViewTextBoxColumn.HeaderText = "Commune";
             codePostalDataGridViewTextBoxColumn.HeaderText = "Code postal";
             adresseDataGridViewTextBoxColumn.HeaderText = "Adresse";
-            emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            telDataGridViewTextBoxColumn.HeaderText = "Tel fixe";
-            telPortableDataGridViewTextBoxColumn.HeaderText = "Tel portable";
+            emailMereDataGridViewTextBoxColumn.HeaderText = "email mère";
+            emailPereDataGridViewTextBoxColumn.HeaderText = "email père";
+            telMereDataGridViewTextBoxColumn.HeaderText = "Tel fixe mère";
+            telPereDataGridViewTextBoxColumn.HeaderText = "Tel fixe père";
+            telPortableMereDataGridViewTextBoxColumn.HeaderText = "Tel portable mère";
+            telPortableMereDataGridViewTextBoxColumn.HeaderText = "Tel portable père";
             dateDeNaissanceDataGridViewTextBoxColumn.HeaderText = "Date de naissance";
             sexeDataGridViewTextBoxColumn.HeaderText = "Sexe";
             licenseNumberDataGridViewTextBoxColumn.HeaderText = "License";
@@ -278,6 +281,15 @@ namespace EasyJudoClub
         private void imprimerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MemberPrinter.Print(GetSelectedMembers());
+        }
+
+        private void nouvelleSaisonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var confirmationMessage =  "Etes-vous certain de vouloir changer de saison? Les changement de saison sont non reversibles";
+            if (MessageBox.Show(this, confirmationMessage, "Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                RefreshFrmMain();
+            }
         }
     }
 }
