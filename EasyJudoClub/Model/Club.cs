@@ -157,5 +157,15 @@ namespace EasyJudoClub.Model
 
             return doctors;
         }
+
+        public void NewSaison()
+        {
+            foreach (var member in this.Members)
+            {
+                member.saisonNmoins1 = member.saisonN;
+                member.saisonN = false;
+            }
+
+        }
     }
 }

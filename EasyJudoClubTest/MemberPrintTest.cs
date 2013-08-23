@@ -21,14 +21,14 @@ namespace EasyJudoClubTest
             var member = new Member();
             member.Nom = "Jeanniard";
             member.Prenom = "Luc";
-
+            member.Nom = "Jeanniard";
+            
             var outPutPath = Path.GetTempPath();
             var expectedOutputFileName = Path.Combine(outPutPath, member.Prenom + "_" + member.Nom + ".pdf");
             var errorMessage = "";
             Assert.IsTrue(MemberPrinter.PrintAsPdf(member, outPutPath, out errorMessage));
             Assert.IsTrue(File.Exists(expectedOutputFileName));
             Assert.IsTrue(String.IsNullOrEmpty(errorMessage));
-            //Process.Start(expectedOutputFileName);
             File.Delete(expectedOutputFileName);
         }
 

@@ -140,7 +140,6 @@ namespace EasyJudoClubTest
         [TestMethod()]
         public void GetAllDoctorsAndTelephones()
         {
-            var members = new SortableBindingList<Member>();
             var newMember1 = _club.AddMember();
             newMember1.CertificatMedicalNomMedecin="medecin1";
             newMember1.CertificatMedicalTelMedecin = "11111111";
@@ -162,6 +161,23 @@ namespace EasyJudoClubTest
             Assert.IsTrue(doctors.ContainsKey("medecin2"));
             Assert.AreEqual("11111111", doctors["medecin1"]);
             Assert.AreEqual("22222222", doctors["medecin2"]);
+        }
+
+        [TestMethod()]
+        public void TestNewSaisonSetsNminus1SaisonANdEmptiesN()
+        {
+            var newMember1 = _club.AddMember();
+            var newMember2 = _club.AddMember();
+            newMember1.saisonN = true;
+            newMember2.saisonN = false;
+            newMember1.saisonNmoins1 = false;
+            newMember2.saisonNmoins1 = true;
+            _club.NewSaison();
+
+            Assert.IsFalse(newMember1.saisonN);
+            Assert.IsFalse(newMember2.saisonN);
+            Assert.IsTrue(newMember1.saisonNmoins1);
+            Assert.IsFalse(newMember2.saisonNmoins1);
         }
     }
 

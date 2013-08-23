@@ -14,5 +14,7 @@ namespace EasyJudoClub.Model
         void UpdateMember(Member oldMember, Member newMember);
 
         Dictionary<string, string> GetDoctorsAndTel();
+
+        void NewSaison();
     }
 }

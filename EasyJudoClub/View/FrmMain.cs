@@ -288,6 +288,7 @@ namespace EasyJudoClub
             var confirmationMessage =  "Etes-vous certain de vouloir changer de saison? Les changement de saison sont non reversibles";
             if (MessageBox.Show(this, confirmationMessage, "Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
+                _easyJudoClubControler.NewSaison();
                 RefreshFrmMain();
             }
         }

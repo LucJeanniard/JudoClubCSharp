@@ -13,6 +13,7 @@ namespace EasyJudoClub
         public FrmLicencie()
         {
             InitializeComponent();
+            DoctorsAndTel = new Dictionary<string, string>();
         }
   
         private Member _member;

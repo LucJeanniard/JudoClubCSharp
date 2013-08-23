@@ -71,5 +71,10 @@ namespace EasyJudoClub.Controler
         {
             return this.JudoClub.GetDoctorsAndTel();
         }
+
+        internal void NewSaison()
+        {
+            this.JudoClub.NewSaison();
+        }
     }
 }
