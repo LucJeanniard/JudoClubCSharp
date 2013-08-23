@@ -57,6 +57,8 @@ namespace EasyJudoClubTest
             var exceptedDelta = new TimeSpan(0, 0, 2); // 2 secondes
             Assert.IsTrue(defaultEntranceDay - defaultMember.DateEntreeClub < exceptedDelta);
             Assert.AreEqual(true, defaultMember.saison2012_2013);
+            Assert.AreEqual(true, defaultMember.saisonN);
+            Assert.AreEqual(false, defaultMember.saisonNmoins1);
             Assert.AreEqual("", defaultMember.Adresse);
             Assert.AreEqual(false, defaultMember.Arbitre);
             Assert.AreEqual(Ceinture.Blanche, defaultMember.Ceinture);

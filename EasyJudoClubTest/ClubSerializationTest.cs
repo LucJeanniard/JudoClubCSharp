@@ -33,6 +33,8 @@ namespace EasyJudoClubTest
             newMember.DateDeNaissance = new DateTime(2005, 6, 25);
             newMember.DateEntreeClub = new DateTime(2010, 9, 15);
             newMember.saison2012_2013 = true;
+            newMember.saisonN = true;
+            newMember.saisonNmoins1 = false;
             newMember.Nom = "Jeanniard";
             newMember.Prenom = "Matti";
             newMember.NomPere = "Jeanniard";
@@ -69,6 +71,8 @@ namespace EasyJudoClubTest
             Assert.AreEqual(new DateTime(2005, 6, 25), firstMemberFromDB.DateDeNaissance);
             Assert.AreEqual(new DateTime(2010, 9, 15), firstMemberFromDB.DateEntreeClub);
             Assert.AreEqual(true, firstMemberFromDB.saison2012_2013);
+            Assert.AreEqual(true, firstMemberFromDB.saisonN);
+            Assert.AreEqual(false, firstMemberFromDB.saisonNmoins1);
             Assert.AreEqual("Jeanniard", firstMemberFromDB.Nom);
             Assert.AreEqual("Matti", firstMemberFromDB.Prenom);
             Assert.AreEqual("Jeanniard", firstMemberFromDB.NomPere);

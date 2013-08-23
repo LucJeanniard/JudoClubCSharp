@@ -53,6 +53,8 @@ namespace EasyJudoClub
             this.memberBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.memberBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.saison20122013DataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.saisonNDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.saisonNmoins1DataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateEntreeClubDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -107,6 +109,8 @@ namespace EasyJudoClub
             this.dataGridMembers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridMembers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.saison20122013DataGridViewCheckBoxColumn,
+            this.saisonNDataGridViewCheckBoxColumn,
+            this.saisonNmoins1DataGridViewCheckBoxColumn,
             this.idDataGridViewTextBoxColumn,
             this.dateEntreeClubDataGridViewTextBoxColumn,
             this.nomDataGridViewTextBoxColumn,
@@ -303,6 +307,20 @@ namespace EasyJudoClub
             this.saison20122013DataGridViewCheckBoxColumn.HeaderText = "saison2012_2013";
             this.saison20122013DataGridViewCheckBoxColumn.Name = "saison20122013DataGridViewCheckBoxColumn";
             this.saison20122013DataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
+            // saisonNDataGridViewCheckBoxColumn
+            // 
+            this.saisonNDataGridViewCheckBoxColumn.DataPropertyName = "saisonN";
+            this.saisonNDataGridViewCheckBoxColumn.HeaderText = "saisonN";
+            this.saisonNDataGridViewCheckBoxColumn.Name = "saisonNDataGridViewCheckBoxColumn";
+            this.saisonNDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
+            // saisonNmoins1DataGridViewCheckBoxColumn
+            // 
+            this.saisonNmoins1DataGridViewCheckBoxColumn.DataPropertyName = "saisonNmoins1";
+            this.saisonNmoins1DataGridViewCheckBoxColumn.HeaderText = "saisonNmoins1";
+            this.saisonNmoins1DataGridViewCheckBoxColumn.Name = "saisonNmoins1DataGridViewCheckBoxColumn";
+            this.saisonNmoins1DataGridViewCheckBoxColumn.ReadOnly = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -595,6 +613,8 @@ namespace EasyJudoClub
         private System.Windows.Forms.ToolStripMenuItem imprimerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nouvelleSaisonToolStripMenuItem;
         private System.Windows.Forms.DataGridViewCheckBoxColumn saison20122013DataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn saisonNDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn saisonNmoins1DataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateEntreeClubDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomDataGridViewTextBoxColumn;

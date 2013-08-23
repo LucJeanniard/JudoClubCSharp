@@ -40,6 +40,8 @@ namespace EasyJudoClub
         {
             // Columns header
             saison20122013DataGridViewCheckBoxColumn.HeaderText = "2012/2013";
+            saisonNDataGridViewCheckBoxColumn.HeaderText = "Saison En cours";
+            saisonNmoins1DataGridViewCheckBoxColumn.HeaderText = "Saison Précédente";
             idDataGridViewTextBoxColumn.HeaderText = "Id";
             dateEntreeClubDataGridViewTextBoxColumn.HeaderText = "Date entrée club";
             nomDataGridViewTextBoxColumn.HeaderText = "Nom";
@@ -78,6 +80,8 @@ namespace EasyJudoClub
                 column.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             }
             saison20122013DataGridViewCheckBoxColumn.ReadOnly = false;
+            saisonNDataGridViewCheckBoxColumn.ReadOnly = false;
+            saisonNmoins1DataGridViewCheckBoxColumn.ReadOnly = true;
 
             // Season changed trigger saving
             dataGridMembers.CellValidated += DataGridMembersOnCellValidated;
@@ -207,7 +211,7 @@ namespace EasyJudoClub
                 var filteredMembersByName = _easyJudoClubControler.GetFilteredMembersByName(searchPattern);
 
                 if (season2012_2013_Only)
-                    filteredMembersByName = _easyJudoClubControler.GetFilteredMembersWithSeason2012_2013Only(filteredMembersByName);
+                    filteredMembersByName = _easyJudoClubControler.GetFilteredMembersWithSeasonNOnly(filteredMembersByName);
 
                 var filteredMembersSortableBindingList = new SortableBindingList<Member>();
                 foreach (var member in filteredMembersByName)

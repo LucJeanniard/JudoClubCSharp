@@ -107,6 +107,8 @@ namespace EasyJudoClub.Model
                 DateDeNaissance = new DateTime(2000, 1, 1),
                 DateEntreeClub = DateTime.Now,
                 saison2012_2013 = true,
+                saisonN = true,
+                saisonNmoins1 = false,
                 Nom = "",
                 Prenom = "",
                 NomPere = "",

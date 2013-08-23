@@ -62,9 +62,9 @@ namespace EasyJudoClub.Controler
             return filteredMembers;
         }
 
-        public List<Member> GetFilteredMembersWithSeason2012_2013Only(List<Member> memberList)
+        public List<Member> GetFilteredMembersWithSeasonNOnly(List<Member> memberList)
         {
-            return memberList.Where(_ => _.saison2012_2013 == true).ToList();
+            return memberList.Where(_ => _.saisonN == true).ToList();
         }
 
         public Dictionary<string, string> GetDoctorsAndTel()
