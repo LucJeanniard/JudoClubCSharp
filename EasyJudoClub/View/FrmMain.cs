@@ -122,7 +122,7 @@ namespace EasyJudoClub
                     
                     Save();
                     RefreshFrmMain();
-                    SetFilter(textBox1.Text, cb_2012_2013_Filter.Checked);
+                    SetFilter(textBox1.Text, cb_SaisonN_Filter.Checked);
                     if (sortedColumn != null)
                         dataGridMembers.Sort(sortedColumn, ListSortDirection.Ascending);
 
@@ -200,9 +200,9 @@ namespace EasyJudoClub
             ResetFilter();
         }
 
-        private void SetFilter(string searchPattern, bool season2012_2013_Only)
+        private void SetFilter(string searchPattern, bool seasonN_Only)
         {
-            if (String.IsNullOrEmpty(searchPattern) && !season2012_2013_Only)
+            if (String.IsNullOrEmpty(searchPattern) && !seasonN_Only)
             {
                 dataGridMembers.DataSource = _easyJudoClubControler.JudoClub.Members;
             }
@@ -210,7 +210,7 @@ namespace EasyJudoClub
             {
                 var filteredMembersByName = _easyJudoClubControler.GetFilteredMembersByName(searchPattern);
 
-                if (season2012_2013_Only)
+                if (seasonN_Only)
                     filteredMembersByName = _easyJudoClubControler.GetFilteredMembersWithSeasonNOnly(filteredMembersByName);
 
                 var filteredMembersSortableBindingList = new SortableBindingList<Member>();
@@ -225,7 +225,7 @@ namespace EasyJudoClub
         public void ResetFilter()
         {
             textBox1.Text = "";
-            cb_2012_2013_Filter.Checked = false;
+            cb_SaisonN_Filter.Checked = false;
         }
 
         private void DataGridMembersOnCellValidated(object sender, DataGridViewCellEventArgs dataGridViewCellEventArgs)
@@ -250,7 +250,7 @@ namespace EasyJudoClub
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            SetFilter(textBox1.Text, cb_2012_2013_Filter.Checked);
+            SetFilter(textBox1.Text, cb_SaisonN_Filter.Checked);
         }
 
         private void creerUneSauvegardeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -268,7 +268,7 @@ namespace EasyJudoClub
 
         private void cb_2012_2013_Filter_CheckedChanged(object sender, EventArgs e)
         {
-            SetFilter(textBox1.Text, cb_2012_2013_Filter.Checked);
+            SetFilter(textBox1.Text, cb_SaisonN_Filter.Checked);
         }
 
         private void editerToolStripMenuItem_Click(object sender, EventArgs e)
