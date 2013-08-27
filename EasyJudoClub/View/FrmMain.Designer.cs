@@ -89,6 +89,9 @@ namespace EasyJudoClub
             this.btn_clearFilter = new System.Windows.Forms.Button();
             this.cb_SaisonN_Filter = new System.Windows.Forms.CheckBox();
             this.memberBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMembers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource1)).BeginInit();
@@ -144,13 +147,16 @@ namespace EasyJudoClub
             this.cotisationAJourDataGridViewCheckBoxColumn,
             this.coutCotisationDataGridViewTextBoxColumn,
             this.categorieDataGridViewTextBoxColumn,
-            this.ageDataGridViewTextBoxColumn});
+            this.ageDataGridViewTextBoxColumn,
+            this.Column1,
+            this.Column2,
+            this.Column3});
             this.dataGridMembers.DataSource = this.memberBindingSource2;
             this.dataGridMembers.Location = new System.Drawing.Point(0, 65);
             this.dataGridMembers.Name = "dataGridMembers";
             this.dataGridMembers.ReadOnly = true;
             this.dataGridMembers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridMembers.Size = new System.Drawing.Size(1071, 404);
+            this.dataGridMembers.Size = new System.Drawing.Size(1168, 404);
             this.dataGridMembers.TabIndex = 1;
             this.dataGridMembers.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dataGridMembers_MouseDoubleClick);
             // 
@@ -433,7 +439,7 @@ namespace EasyJudoClub
             this.nouvelleSaisonToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1071, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1168, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -508,7 +514,7 @@ namespace EasyJudoClub
             this.toolStripStatus_members});
             this.statusStrip1.Location = new System.Drawing.Point(0, 472);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1071, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1168, 22);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -560,11 +566,32 @@ namespace EasyJudoClub
             // 
             this.memberBindingSource.DataSource = typeof(EasyJudoClub.Member);
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "saison2012_2013";
+            this.Column1.HeaderText = "Column1";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "saison2012_2013";
+            this.Column2.HeaderText = "Column2";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "saison2012_2013";
+            this.Column3.HeaderText = "Column3";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1071, 494);
+            this.ClientSize = new System.Drawing.Size(1168, 494);
             this.Controls.Add(this.cb_SaisonN_Filter);
             this.Controls.Add(this.btn_clearFilter);
             this.Controls.Add(this.label1);
@@ -650,6 +677,9 @@ namespace EasyJudoClub
         private System.Windows.Forms.DataGridViewTextBoxColumn categorieDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ageDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource memberBindingSource2;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column3;
 
     }
 }
