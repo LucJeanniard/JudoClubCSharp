@@ -88,7 +88,7 @@ namespace EasyJudoClub
             tbf_TelMedecin.Text = _member.CertificatMedicalTelMedecin;
             cbb_medecin.Text = _member.CertificatMedicalNomMedecin;
             cbb_medecin.Items.Clear();
-            cbb_medecin.Items.AddRange(DoctorsAndTel.Keys.ToArray<string>());
+            cbb_medecin.Items.AddRange(DoctorsAndTel.Keys.OrderBy(_ => _).ToArray<string>());
             cbb_medecin.SelectedItem = _member.CertificatMedicalNomMedecin;
 
             tbf_Cotisation.Text = _member.CoutCotisation.ToString();

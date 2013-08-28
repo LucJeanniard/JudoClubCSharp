@@ -156,7 +156,7 @@ namespace EasyJudoClub.Model
                 }
             }
 
-            return doctors;
+            return doctors ;
         }
 
         public void NewSaison()
