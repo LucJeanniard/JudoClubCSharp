@@ -39,7 +39,6 @@ namespace EasyJudoClub
         private void SetGridPoperties()
         {
             // Columns header
-            saison20122013DataGridViewCheckBoxColumn.HeaderText = "2012/2013";
             saisonNDataGridViewCheckBoxColumn.HeaderText = "Saison En cours";
             saisonNmoins1DataGridViewCheckBoxColumn.HeaderText = "Saison Précédente";
             idDataGridViewTextBoxColumn.HeaderText = "Id";
@@ -79,7 +78,6 @@ namespace EasyJudoClub
                 column.ReadOnly = true;
                 column.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             }
-            saison20122013DataGridViewCheckBoxColumn.ReadOnly = false;
             saisonNDataGridViewCheckBoxColumn.ReadOnly = false;
             saisonNmoins1DataGridViewCheckBoxColumn.ReadOnly = true;
 
