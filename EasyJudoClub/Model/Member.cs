@@ -8,7 +8,6 @@ namespace EasyJudoClub
     [Serializable]
     public class Member
     {        
-        public bool saison2012_2013 { get; set; }
         public bool saisonN { get; set; }
         public bool saisonNmoins1{ get; set; }
         public int Id { get; set; }

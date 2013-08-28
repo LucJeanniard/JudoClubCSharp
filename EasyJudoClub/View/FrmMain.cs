@@ -264,7 +264,7 @@ namespace EasyJudoClub
             ResetFilter();
         }
 
-        private void cb_2012_2013_Filter_CheckedChanged(object sender, EventArgs e)
+        private void cb_SaisonN_Filter_CheckedChanged(object sender, EventArgs e)
         {
             SetFilter(textBox1.Text, cb_SaisonN_Filter.Checked);
         }
