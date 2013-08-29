@@ -128,6 +128,7 @@ namespace EasyJudoClub.Model
                 Ceinture = Ceinture.Blanche,
                 CommisaireSportif = false,
                 Arbitre = false,
+                Passeport = false,
                 CertificatMedicalNomMedecin = "",
                 CertificatMedicalTelMedecin = "",
                 MoyenPaiementsLiquide = "",
@@ -165,6 +166,11 @@ namespace EasyJudoClub.Model
             {
                 member.saisonNmoins1 = member.saisonN;
                 member.saisonN = false;
+                member.MoyenPaiementsCarteMRA = String.Empty;
+                member.MoyenPaiementsCheque = String.Empty;
+                member.MoyenPaiementsChequesVacances = String.Empty;
+                member.MoyenPaiementsChequierJeune = String.Empty;
+                member.MoyenPaiementsLiquide= String.Empty;
             }
 
         }

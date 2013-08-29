@@ -60,6 +60,7 @@ namespace EasyJudoClubTest
             Assert.AreEqual(false, defaultMember.saisonNmoins1);
             Assert.AreEqual("", defaultMember.Adresse);
             Assert.AreEqual(false, defaultMember.Arbitre);
+            Assert.AreEqual(false, defaultMember.Passeport);
             Assert.AreEqual(Ceinture.Blanche, defaultMember.Ceinture);
             Assert.AreEqual("", defaultMember.CertificatMedicalNomMedecin);
             Assert.AreEqual("", defaultMember.CertificatMedicalTelMedecin);
@@ -107,6 +108,7 @@ namespace EasyJudoClubTest
             var firstMember = _club.Members[0];
             firstMember.Adresse = "490 route du vieux clocher";
             firstMember.Arbitre = true;
+            firstMember.Passeport= true;
 
             _club.UpdateMember(defaultMember, firstMember);
 
@@ -114,6 +116,7 @@ namespace EasyJudoClubTest
             Assert.AreEqual(0, _club.Members[0].Id); 
             Assert.AreEqual("490 route du vieux clocher", _club.Members[0].Adresse);
             Assert.AreEqual(true, _club.Members[0].Arbitre);
+            Assert.AreEqual(true, _club.Members[0].Passeport);
         }
 
         /// <summary>
@@ -173,12 +176,38 @@ namespace EasyJudoClubTest
             newMember2.saisonN = false;
             newMember1.saisonNmoins1 = false;
             newMember2.saisonNmoins1 = true;
+
+            newMember1.MoyenPaiementsCarteMRA = "10";
+            newMember1.MoyenPaiementsCheque = "16";
+            newMember1.MoyenPaiementsChequesVacances = "2";
+            newMember1.MoyenPaiementsChequierJeune = "52";
+            newMember1.MoyenPaiementsLiquide = "45";
+
+            newMember2.MoyenPaiementsCarteMRA = "10";
+            newMember2.MoyenPaiementsCheque = "16";
+            newMember2.MoyenPaiementsChequesVacances = "2";
+            newMember2.MoyenPaiementsChequierJeune = "52";
+            newMember2.MoyenPaiementsLiquide = "45";
+
+
             _club.NewSaison();
 
             Assert.IsFalse(newMember1.saisonN);
             Assert.IsFalse(newMember2.saisonN);
             Assert.IsTrue(newMember1.saisonNmoins1);
             Assert.IsFalse(newMember2.saisonNmoins1);
+
+            Assert.IsTrue(newMember1.MoyenPaiementsCarteMRA == String.Empty);
+            Assert.IsTrue(newMember1.MoyenPaiementsCheque == String.Empty);
+            Assert.IsTrue(newMember1.MoyenPaiementsChequesVacances == String.Empty);
+            Assert.IsTrue(newMember1.MoyenPaiementsChequierJeune == String.Empty);
+            Assert.IsTrue(newMember1.MoyenPaiementsLiquide == String.Empty);
+
+            Assert.IsTrue(newMember2.MoyenPaiementsCarteMRA == String.Empty);
+            Assert.IsTrue(newMember2.MoyenPaiementsCheque == String.Empty);
+            Assert.IsTrue(newMember2.MoyenPaiementsChequesVacances == String.Empty);
+            Assert.IsTrue(newMember2.MoyenPaiementsChequierJeune == String.Empty);
+            Assert.IsTrue(newMember2.MoyenPaiementsLiquide == String.Empty);
         }
     }
 

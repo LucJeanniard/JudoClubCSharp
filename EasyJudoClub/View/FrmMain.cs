@@ -64,6 +64,7 @@ namespace EasyJudoClub
             ceintureDataGridViewTextBoxColumn.HeaderText = "Ceinture";
             commisaireSportifDataGridViewCheckBoxColumn.HeaderText = "CS";
             arbitreDataGridViewCheckBoxColumn.HeaderText = "Arbitre";
+            passeportDataGridViewCheckBoxColumn.HeaderText = "Passeport";
             certificatMedicalNomMedecinDataGridViewTextBoxColumn.HeaderText = "Nom medecin";
             certificatMedicalTelMedecinDataGridViewTextBoxColumn.HeaderText = "Tel medecin";
             coutCotisationDataGridViewTextBoxColumn.HeaderText = "Coût cotisation";

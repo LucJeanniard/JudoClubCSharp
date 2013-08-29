@@ -84,6 +84,7 @@ namespace EasyJudoClub
            
             cbf_CommissaireSportif.Value = _member.CommisaireSportif;
             cbf_Arbitre.Value = _member.Arbitre;
+            cbf_Passeport.Value = _member.Passeport;
 
             tbf_TelMedecin.Text = _member.CertificatMedicalTelMedecin;
             cbb_medecin.Text = _member.CertificatMedicalNomMedecin;
@@ -247,6 +248,11 @@ namespace EasyJudoClub
             Member.Arbitre = cbf_Arbitre.Value;
         }
 
+        private void cbf_Passeport_Validated(object sender, EventArgs e)
+        {
+            Member.Passeport = cbf_Passeport.Value;
+        }
+        
         private void df_DateEntreeClub_Validated(object sender, EventArgs e)
         {
             Member.DateEntreeClub = df_DateEntreeClub.Date;

@@ -34,6 +34,7 @@ namespace EasyJudoClub
         public Ceinture Ceinture { get; set; }
         public bool CommisaireSportif { get; set; }
         public bool Arbitre { get; set; }
+        public bool Passeport { get; set; }
         public string CertificatMedicalNomMedecin { get; set; }
         public string CertificatMedicalTelMedecin { get; set; }
 

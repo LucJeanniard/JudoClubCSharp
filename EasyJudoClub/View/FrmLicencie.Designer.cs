@@ -61,6 +61,7 @@
             this.tbf_Cheque = new EasyJudoClub.TextBoxField();
             this.tbf_Cotisation = new EasyJudoClub.TextBoxField();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.cbb_medecin = new System.Windows.Forms.ComboBox();
             this.tbf_TelMedecin = new EasyJudoClub.TextBoxField();
             this.btn_OK = new System.Windows.Forms.Button();
@@ -73,7 +74,7 @@
             this.tbf_EmailPere = new EasyJudoClub.TextBoxField();
             this.tbf_PrenomPere = new EasyJudoClub.TextBoxField();
             this.tbf_NomPere = new EasyJudoClub.TextBoxField();
-            this.label1 = new System.Windows.Forms.Label();
+            this.cbf_Passeport = new EasyJudoClub.Controls.CheckBoxField();
             this.gb_identite.SuspendLayout();
             this.gb_adresse.SuspendLayout();
             this.gb_mère.SuspendLayout();
@@ -305,6 +306,7 @@
             // 
             // gb_divers
             // 
+            this.gb_divers.Controls.Add(this.cbf_Passeport);
             this.gb_divers.Controls.Add(this.cbf_Arbitre);
             this.gb_divers.Controls.Add(this.df_DateEntreeClub);
             this.gb_divers.Controls.Add(this.cbf_CommissaireSportif);
@@ -318,7 +320,7 @@
             // cbf_Arbitre
             // 
             this.cbf_Arbitre.Label = "Arbitre";
-            this.cbf_Arbitre.Location = new System.Drawing.Point(190, 22);
+            this.cbf_Arbitre.Location = new System.Drawing.Point(131, 22);
             this.cbf_Arbitre.Name = "cbf_Arbitre";
             this.cbf_Arbitre.Size = new System.Drawing.Size(92, 27);
             this.cbf_Arbitre.TabIndex = 1;
@@ -430,6 +432,15 @@
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Certificat médical";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(29, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Nom";
             // 
             // cbb_medecin
             // 
@@ -557,14 +568,15 @@
             this.tbf_NomPere.TabIndex = 0;
             this.tbf_NomPere.Validated += new System.EventHandler(this.tbf_NomPere_Validated);
             // 
-            // label1
+            // cbf_Passeport
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Nom";
+            this.cbf_Passeport.Label = "Passeport";
+            this.cbf_Passeport.Location = new System.Drawing.Point(234, 22);
+            this.cbf_Passeport.Name = "cbf_Passeport";
+            this.cbf_Passeport.Size = new System.Drawing.Size(92, 27);
+            this.cbf_Passeport.TabIndex = 3;
+            this.cbf_Passeport.Value = false;
+            this.cbf_Passeport.Validated += new System.EventHandler(this.cbf_Passeport_Validated);
             // 
             // FrmLicencie
             // 
@@ -650,5 +662,6 @@
         private TextBoxField tbf_EmailMere;
         private System.Windows.Forms.ComboBox cbb_medecin;
         private System.Windows.Forms.Label label1;
+        private Controls.CheckBoxField cbf_Passeport;
     }
 }

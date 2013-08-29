@@ -54,6 +54,7 @@ namespace EasyJudoClubTest
             newMember.Ceinture = Ceinture.Blanche1Trait;
             newMember.CommisaireSportif = true;
             newMember.Arbitre = false;
+            newMember.Passeport = false;
             newMember.CertificatMedicalNomMedecin = "Jean Docteur";
             newMember.CertificatMedicalTelMedecin = "04.11.22.33.44";
             newMember.MoyenPaiementsLiquide = "10";
@@ -91,6 +92,7 @@ namespace EasyJudoClubTest
             Assert.AreEqual(Ceinture.Blanche1Trait, firstMemberFromDB.Ceinture);
             Assert.AreEqual(true, firstMemberFromDB.CommisaireSportif);
             Assert.AreEqual(false, firstMemberFromDB.Arbitre);
+            Assert.AreEqual(false, firstMemberFromDB.Passeport);
             Assert.AreEqual("Jean Docteur", firstMemberFromDB.CertificatMedicalNomMedecin);
             Assert.AreEqual("04.11.22.33.44", firstMemberFromDB.CertificatMedicalTelMedecin);
             Assert.AreEqual("10", firstMemberFromDB.MoyenPaiementsLiquide);

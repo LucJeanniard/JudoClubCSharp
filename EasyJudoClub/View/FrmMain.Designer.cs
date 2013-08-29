@@ -52,12 +52,16 @@ namespace EasyJudoClub
             this.cb_SaisonN_Filter = new System.Windows.Forms.CheckBox();
             this.memberBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.memberBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.saisonNDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.saisonNmoins1DataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateEntreeClubDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prenomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDeNaissanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sexeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ceintureDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomPereDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prenomPereDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomMereDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,12 +75,10 @@ namespace EasyJudoClub
             this.emailPereDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telPereDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telPortablePereDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateDeNaissanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sexeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.licenseNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ceintureDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.commisaireSportifDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.arbitreDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.passeportDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.certificatMedicalNomMedecinDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.certificatMedicalTelMedecinDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.moyenPaiementsLiquideDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -87,7 +89,6 @@ namespace EasyJudoClub
             this.cotisationAJourDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.coutCotisationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categorieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMembers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource2)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -107,12 +108,16 @@ namespace EasyJudoClub
             this.dataGridMembers.AutoGenerateColumns = false;
             this.dataGridMembers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridMembers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
             this.saisonNDataGridViewCheckBoxColumn,
             this.saisonNmoins1DataGridViewCheckBoxColumn,
-            this.idDataGridViewTextBoxColumn,
             this.dateEntreeClubDataGridViewTextBoxColumn,
             this.nomDataGridViewTextBoxColumn,
             this.prenomDataGridViewTextBoxColumn,
+            this.dateDeNaissanceDataGridViewTextBoxColumn,
+            this.ageDataGridViewTextBoxColumn,
+            this.sexeDataGridViewTextBoxColumn,
+            this.ceintureDataGridViewTextBoxColumn,
             this.nomPereDataGridViewTextBoxColumn,
             this.prenomPereDataGridViewTextBoxColumn,
             this.nomMereDataGridViewTextBoxColumn,
@@ -126,12 +131,10 @@ namespace EasyJudoClub
             this.emailPereDataGridViewTextBoxColumn,
             this.telPereDataGridViewTextBoxColumn,
             this.telPortablePereDataGridViewTextBoxColumn,
-            this.dateDeNaissanceDataGridViewTextBoxColumn,
-            this.sexeDataGridViewTextBoxColumn,
             this.licenseNumberDataGridViewTextBoxColumn,
-            this.ceintureDataGridViewTextBoxColumn,
             this.commisaireSportifDataGridViewCheckBoxColumn,
             this.arbitreDataGridViewCheckBoxColumn,
+            this.passeportDataGridViewCheckBoxColumn,
             this.certificatMedicalNomMedecinDataGridViewTextBoxColumn,
             this.certificatMedicalTelMedecinDataGridViewTextBoxColumn,
             this.moyenPaiementsLiquideDataGridViewTextBoxColumn,
@@ -141,8 +144,7 @@ namespace EasyJudoClub
             this.moyenPaiementsCarteMRADataGridViewTextBoxColumn,
             this.cotisationAJourDataGridViewCheckBoxColumn,
             this.coutCotisationDataGridViewTextBoxColumn,
-            this.categorieDataGridViewTextBoxColumn,
-            this.ageDataGridViewTextBoxColumn});
+            this.categorieDataGridViewTextBoxColumn});
             this.dataGridMembers.DataSource = this.memberBindingSource2;
             this.dataGridMembers.Location = new System.Drawing.Point(0, 65);
             this.dataGridMembers.Name = "dataGridMembers";
@@ -299,6 +301,13 @@ namespace EasyJudoClub
             // 
             this.memberBindingSource.DataSource = typeof(EasyJudoClub.Member);
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // saisonNDataGridViewCheckBoxColumn
             // 
             this.saisonNDataGridViewCheckBoxColumn.DataPropertyName = "saisonN";
@@ -312,13 +321,6 @@ namespace EasyJudoClub
             this.saisonNmoins1DataGridViewCheckBoxColumn.HeaderText = "saisonNmoins1";
             this.saisonNmoins1DataGridViewCheckBoxColumn.Name = "saisonNmoins1DataGridViewCheckBoxColumn";
             this.saisonNmoins1DataGridViewCheckBoxColumn.ReadOnly = true;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dateEntreeClubDataGridViewTextBoxColumn
             // 
@@ -340,6 +342,34 @@ namespace EasyJudoClub
             this.prenomDataGridViewTextBoxColumn.HeaderText = "Prenom";
             this.prenomDataGridViewTextBoxColumn.Name = "prenomDataGridViewTextBoxColumn";
             this.prenomDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dateDeNaissanceDataGridViewTextBoxColumn
+            // 
+            this.dateDeNaissanceDataGridViewTextBoxColumn.DataPropertyName = "DateDeNaissance";
+            this.dateDeNaissanceDataGridViewTextBoxColumn.HeaderText = "DateDeNaissance";
+            this.dateDeNaissanceDataGridViewTextBoxColumn.Name = "dateDeNaissanceDataGridViewTextBoxColumn";
+            this.dateDeNaissanceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ageDataGridViewTextBoxColumn
+            // 
+            this.ageDataGridViewTextBoxColumn.DataPropertyName = "Age";
+            this.ageDataGridViewTextBoxColumn.HeaderText = "Age";
+            this.ageDataGridViewTextBoxColumn.Name = "ageDataGridViewTextBoxColumn";
+            this.ageDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sexeDataGridViewTextBoxColumn
+            // 
+            this.sexeDataGridViewTextBoxColumn.DataPropertyName = "Sexe";
+            this.sexeDataGridViewTextBoxColumn.HeaderText = "Sexe";
+            this.sexeDataGridViewTextBoxColumn.Name = "sexeDataGridViewTextBoxColumn";
+            this.sexeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ceintureDataGridViewTextBoxColumn
+            // 
+            this.ceintureDataGridViewTextBoxColumn.DataPropertyName = "Ceinture";
+            this.ceintureDataGridViewTextBoxColumn.HeaderText = "Ceinture";
+            this.ceintureDataGridViewTextBoxColumn.Name = "ceintureDataGridViewTextBoxColumn";
+            this.ceintureDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // nomPereDataGridViewTextBoxColumn
             // 
@@ -432,33 +462,12 @@ namespace EasyJudoClub
             this.telPortablePereDataGridViewTextBoxColumn.Name = "telPortablePereDataGridViewTextBoxColumn";
             this.telPortablePereDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dateDeNaissanceDataGridViewTextBoxColumn
-            // 
-            this.dateDeNaissanceDataGridViewTextBoxColumn.DataPropertyName = "DateDeNaissance";
-            this.dateDeNaissanceDataGridViewTextBoxColumn.HeaderText = "DateDeNaissance";
-            this.dateDeNaissanceDataGridViewTextBoxColumn.Name = "dateDeNaissanceDataGridViewTextBoxColumn";
-            this.dateDeNaissanceDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sexeDataGridViewTextBoxColumn
-            // 
-            this.sexeDataGridViewTextBoxColumn.DataPropertyName = "Sexe";
-            this.sexeDataGridViewTextBoxColumn.HeaderText = "Sexe";
-            this.sexeDataGridViewTextBoxColumn.Name = "sexeDataGridViewTextBoxColumn";
-            this.sexeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // licenseNumberDataGridViewTextBoxColumn
             // 
             this.licenseNumberDataGridViewTextBoxColumn.DataPropertyName = "LicenseNumber";
             this.licenseNumberDataGridViewTextBoxColumn.HeaderText = "LicenseNumber";
             this.licenseNumberDataGridViewTextBoxColumn.Name = "licenseNumberDataGridViewTextBoxColumn";
             this.licenseNumberDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // ceintureDataGridViewTextBoxColumn
-            // 
-            this.ceintureDataGridViewTextBoxColumn.DataPropertyName = "Ceinture";
-            this.ceintureDataGridViewTextBoxColumn.HeaderText = "Ceinture";
-            this.ceintureDataGridViewTextBoxColumn.Name = "ceintureDataGridViewTextBoxColumn";
-            this.ceintureDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // commisaireSportifDataGridViewCheckBoxColumn
             // 
@@ -473,6 +482,13 @@ namespace EasyJudoClub
             this.arbitreDataGridViewCheckBoxColumn.HeaderText = "Arbitre";
             this.arbitreDataGridViewCheckBoxColumn.Name = "arbitreDataGridViewCheckBoxColumn";
             this.arbitreDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
+            // passeportDataGridViewCheckBoxColumn
+            // 
+            this.passeportDataGridViewCheckBoxColumn.DataPropertyName = "Arbitre";
+            this.passeportDataGridViewCheckBoxColumn.HeaderText = "Arbitre";
+            this.passeportDataGridViewCheckBoxColumn.Name = "passeportDataGridViewCheckBoxColumn";
+            this.passeportDataGridViewCheckBoxColumn.ReadOnly = true;
             // 
             // certificatMedicalNomMedecinDataGridViewTextBoxColumn
             // 
@@ -526,7 +542,7 @@ namespace EasyJudoClub
             // cotisationAJourDataGridViewCheckBoxColumn
             // 
             this.cotisationAJourDataGridViewCheckBoxColumn.DataPropertyName = "CotisationAJour";
-            this.cotisationAJourDataGridViewCheckBoxColumn.HeaderText = "CotisationAJour";
+            this.cotisationAJourDataGridViewCheckBoxColumn.HeaderText = "Cotisation à Jour";
             this.cotisationAJourDataGridViewCheckBoxColumn.Name = "cotisationAJourDataGridViewCheckBoxColumn";
             this.cotisationAJourDataGridViewCheckBoxColumn.ReadOnly = true;
             // 
@@ -543,13 +559,6 @@ namespace EasyJudoClub
             this.categorieDataGridViewTextBoxColumn.HeaderText = "Categorie";
             this.categorieDataGridViewTextBoxColumn.Name = "categorieDataGridViewTextBoxColumn";
             this.categorieDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // ageDataGridViewTextBoxColumn
-            // 
-            this.ageDataGridViewTextBoxColumn.DataPropertyName = "Age";
-            this.ageDataGridViewTextBoxColumn.HeaderText = "Age";
-            this.ageDataGridViewTextBoxColumn.Name = "ageDataGridViewTextBoxColumn";
-            this.ageDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // FrmMain
             // 
@@ -604,12 +613,16 @@ namespace EasyJudoClub
         private System.Windows.Forms.ToolStripMenuItem imprimerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nouvelleSaisonToolStripMenuItem;
         private System.Windows.Forms.BindingSource memberBindingSource2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn saisonNDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn saisonNmoins1DataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateEntreeClubDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prenomDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateDeNaissanceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ageDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sexeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ceintureDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomPereDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prenomPereDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomMereDataGridViewTextBoxColumn;
@@ -623,12 +636,10 @@ namespace EasyJudoClub
         private System.Windows.Forms.DataGridViewTextBoxColumn emailPereDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telPereDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telPortablePereDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateDeNaissanceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sexeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn licenseNumberDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ceintureDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn commisaireSportifDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn arbitreDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn passeportDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn certificatMedicalNomMedecinDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn certificatMedicalTelMedecinDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn moyenPaiementsLiquideDataGridViewTextBoxColumn;
@@ -639,7 +650,6 @@ namespace EasyJudoClub
         private System.Windows.Forms.DataGridViewCheckBoxColumn cotisationAJourDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn coutCotisationDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn categorieDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ageDataGridViewTextBoxColumn;
 
     }
 }
