@@ -293,6 +293,7 @@ namespace EasyJudoClub
             {
                 _easyJudoClubControler.NewSaison();
                 RefreshFrmMain();
+                _easyJudoClubControler.Save();
             }
         }
     }
